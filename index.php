@@ -27,15 +27,11 @@ session_start();
     ?>
   </head>
   <body>
-    <?php include 'include/nav.php'; ?>
-    <?php 
-    include 'include/carousel.php'; 
-    ?>
-    <?php include 'include/otherhome.php';?>
-    <?php 
-    include 'include/student.php';
-    ?>
-    <?php include 'include/footer.php'; ?>
+    <?php include 'nav.php'; ?>
+    <?php include 'carousel.php'; ?>
+    <?php include 'otherhome.php'; ?>
+    <?php include 'student.php'; ?>
+    <?php include 'footer.php'; ?>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>

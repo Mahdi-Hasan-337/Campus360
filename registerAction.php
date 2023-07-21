@@ -1,7 +1,5 @@
 <?php
-
-    // include config.php to connect database
-    include 'include/config.php';
+    include 'config.php';
 
     // to accept all values coming from register.php field
     $r_username = $_POST['r_username'];
