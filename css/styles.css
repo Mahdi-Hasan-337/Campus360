@@ -258,3 +258,15 @@
   .signup-txt:hover{
       text-decoration: underline;
   }
+  .modal-close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: none;
+  }
+
+  .modal-body {
+    position: relative;
+  }
