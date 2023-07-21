@@ -71,12 +71,12 @@
     align-items: center;
     justify-content: center;
   }
-  #search-menu {
+   #search-menu {
     padding: 5px;
-    width: 19rem;
+    width: 30rem;
   }
   #search-menu input {
-    width: 200px;
+    width: 28rem;
   }
   .element3 .dropdown-toggle::after {
     content: none;
@@ -97,6 +97,14 @@
   }
   .centered-dropdown-menu li {
     line-height: 1;
+  }
+  .profile{
+    display: flex;
+    justify-content: space-between;
+  }
+  .d-flex.icon-txt {
+    display: flex;
+    align-items: center;
   }
 
   /* .reverse{

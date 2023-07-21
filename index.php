@@ -1,5 +1,5 @@
 <?php 
-//session_start();
+session_start();
 ?>
 <!doctype html>
 <html lang="en">
@@ -25,10 +25,10 @@
     <title>Campus Dot Crew</title>
     <!-- ... Other meta tags and links ... -->
     <?php
-    // $cssFile = isset($_SESSION['l_username']) ? 'styles1.css' : 'styles.css';
-    // echo '<link rel="stylesheet" type="text/css" href="css/' . $cssFile . '">';
+    $cssFile = isset($_SESSION['l_username']) ? 'styles1.css' : 'styles.css';
+    echo '<link rel="stylesheet" type="text/css" href="css/' . $cssFile . '">';
     ?>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
   </head>
   <body>
     <?php include 'nav.php'?>

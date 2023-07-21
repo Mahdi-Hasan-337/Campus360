@@ -1,9 +1,11 @@
-<?php session_start(); ?>
+<?php 
+//session_start(); 
+?>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 px-1">
   <div class="container-fluid">
     <img class="logo" src="images/campusdotcrew.png" alt="">
-    <a class="navbar-brand logo-name" href="index.html">Campus Dot Crew</a>
+    <a class="navbar-brand logo-name" href="index.php">Campus Dot Crew</a>
     <button class="navbar-toggler white-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -51,39 +53,53 @@
       <div class="element3 d-flex" style="align-items: center;">
         <?php if (isset($_SESSION['l_username'])) { ?>
           <!-- Code for the logged-in user -->
-          <a class="li-item nav-link dropdown dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="images/campusdotcrew.png" class="rounded-circle" alt="Avatar" loading="lazy" style="height: 2.5rem; width: 2.5rem;">
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end centered-dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="align-items: center; padding: 1rem;">
-            <li>
-              <img src="images/campusdotcrew.png" class="text-center p-pic rounded-circle" alt="Avatar" loading="lazy" style="height: 3rem; width: 3rem; display: block; margin: 0 auto; text-align: center;">
-              <h4 class="my-3" style="font-weight: bold;">Campus Dot Crew</h4>
-            </li>
-            <hr>
-            <li>
-              <div class="d-flex bd-highlight mb-3">
-                <div class="p-2 bd-highlight"><i class="p-icon fa-solid fa-pen-to-square"></i></div>
-                <div class="p-2 bd-highlight p-txt">Update profile</div>
-                <div class="ms-auto p-2 bd-highlight"><span class="p-span">></span></div>
-              </div>
-            </li>
-            <hr>
-            <li>
-              <div class="d-flex bd-highlight mb-3">
-                <div class="p-2 bd-highlight"><i class="p-icon fa-solid fa-gear"></i></div>
-                <div class="p-2 bd-highlight p-txt">Settings</div>
-                <div class="ms-auto p-2 bd-highlight"><span class="p-span">></span></div>
-              </div>
-            </li>
-            <hr>
-            <li>
-              <div class="d-flex bd-highlight mb-3">
-                <div class="p-2 bd-highlight"><i class="p-icon fa-solid fa-arrow-right-from-bracket"></i></div>
-                <div class="p-2 bd-highlight p-txt">
-                  <a href='logout.php' class='' style='text-decoration: none;color: black;'>Logout</a>
-                </div>
-                <div class="ms-auto p-2 bd-highlight"><span class="p-span">></span></div>
-              </div>
+          <ul class="navbar-nav justify-content-center">
+            <li class="nav-item dropdown d-menu">
+              <a class="li-item nav-link dropdown dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="images/campusdotcrew.png" class="rounded-circle" alt="Avatar" loading="lazy" style="height: 2.5rem; width: 2.5rem;">
+              </a>              
+              <ul class="dropdown-menu dropdown-menu-end" style="width: 17rem; padding: 2rem 2rem 0rem 2rem;" aria-labelledby="navbarDropdownMenuLink">
+              <li>
+                <img src="images/campusdotcrew.png" class="text-center p-pic rounded-circle" alt="Avatar" loading="lazy" style="height: 3rem; width: 3rem; display: block; margin: 0 auto; text-align: center;">
+              </li>
+              <li class="text-center" style="font-size:1.5rem; font-weight:bold;">Campus Dot Crew</li>
+              <hr>
+              <li>
+                <a href="#" style="text-decoration:none;color:black;">
+                  <div class="container-content" style="margin-bottom: 20px;">
+                    <div class="profile d-flex">
+                      <div class="d-flex icon-txt" style="margin-right: 1rem;">
+                        <i class="p-icon fa-solid fa-pen-to-square"></i> <pre> </pre><span class="p-txt" style="font-size:1.2rem;font-weight: 700;">Update Profile</span>
+                      </div>
+                      <div class="arrow"><span style="font-size:1.25rem;margin-right:0.25rem;">></span></div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" style="text-decoration:none;color:black;">
+                  <div class="container-content" style="margin-bottom: 20px;">
+                    <div class="profile d-flex">
+                      <div class="d-flex icon-txt" style="margin-right: 1rem;">
+                        <i class="p-icon fa-solid fa-gear"></i> <pre> </pre><span class="p-txt" style="font-size:1.2rem;font-weight: 700;">Settings</span>
+                      </div>
+                      <div class="arrow"><span style="font-size:1.25rem;margin-right:0.25rem;">></span></div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="logout.php" style="text-decoration:none;color:black;">
+                  <div class="container-content" style="margin-bottom: 20px;">
+                    <div class="profile d-flex">
+                      <div class="d-flex icon-txt" style="margin-right: 1rem;">
+                        <i class="p-icon fa-solid fa-arrow-right-from-bracket"></i> <pre> </pre><span class="p-txt" style="font-size:1.2rem;font-weight: 700;">Logout</span>
+                      </div>
+                      <div class="arrow"><span style="font-size:1.25rem;margin-right:0.25rem;">></span></div>
+                    </div>
+                  </div>
+                </a>
+              </li>
             </li>
           </ul>
         <?php } else { ?>
