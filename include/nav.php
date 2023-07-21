@@ -89,7 +89,7 @@
                 </a>
               </li>
               <li>
-                <a href="logout.php" style="text-decoration:none;color:black;">
+                <a href="include/logout.php" style="text-decoration:none;color:black;">
                   <div class="container-content" style="margin-bottom: 20px;">
                     <div class="profile d-flex">
                       <div class="d-flex icon-txt" style="margin-right: 1rem;">
@@ -116,7 +116,7 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-body">
-        <form action="loginAction.php" method="post">
+        <form action="include/loginAction.php" method="post">
           <button type="button" class="modal-close-btn" style="" data-bs-dismiss="modal" aria-label="Close">&times</button>
           <h2>Login</h2>
           <div class="input-box">
@@ -151,7 +151,7 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-body">
-        <form action="#" method="post">
+        <form action="helper/registerAction.php" method="post">
         <button type="button" class="modal-close-btn" style="" data-bs-dismiss="modal" aria-label="Close">&times</button>
           <!-- <button type="button" class="modal-close-btn btn-close" style="margin-right:2rem; margin-top:2rem;" data-bs-dismiss="modal" aria-label="Close"></button> -->
           <h2>Register</h2>

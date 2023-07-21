@@ -1,5 +1,5 @@
 <?php
-    include 'config.php';
+    include 'include/config.php';
     session_start();    
     $l_username = $_POST['l_username'];
     $l_pass = $_POST['l_pass'];
