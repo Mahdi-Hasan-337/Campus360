@@ -141,10 +141,8 @@
         color:black !important;
     }
 
-    /* Optional: Change the background color of the carousel control buttons */
-    .carousel-control-prev,
+    /* .carousel-control-prev,
     .carousel-control-next {
-        /* Replace 'your-desired-background-color' with the background color value you want */
         background-color: rgba(245, 244, 244, 0.97);
-    }
+    } */
 </style>
