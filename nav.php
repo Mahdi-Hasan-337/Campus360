@@ -88,7 +88,7 @@
           </ul>
         <?php } else { ?>
           <!-- Code for the not logged-in user -->
-          <a class='login-btn nav-link text-center' data-bs-toggle="modal" href="#loginModal" role="button" tabindex='-1' aria-disabled='true'>Login</a>
+          <a class="login-btn nav-link text-center" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Login</a>
         <?php } ?>
       </div>
     </div>
@@ -96,11 +96,12 @@
 </nav>
 
 <!-- Login Modal -->
-<div class="modal fade" id="loginModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-body">
         <form action="loginAction.php" method="post">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           <h2>Login</h2>
           <div class="input-box">
             <input type="text" id="username" placeholder="Enter username" class="form-control" name="l_username" required>
@@ -120,10 +121,8 @@
           </div>
           <button class="button">Login</button>
           <div class="login-signup">
-            Already have an account? 
-            <a href="#registerModal" data-bs-toggle="modal" href="#exampleModalToggle" role="button" tabindex='-1' aria-disabled='true' class="signup-txt">
-              Signup
-            </a>
+            Already have an account?
+            <a class="signup-txt" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Signup</a>
           </div>
         </form>
       </div>
@@ -132,11 +131,12 @@
 </div>
 
 <!-- Register Modal -->
-<div class="modal fade" id="registerModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-body">
         <form action="#" method="post">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           <h2>Register</h2>
           <div class="input-box">
             <input type="text" id="username" placeholder="Enter username" class="form-control" name="r_username" required>
@@ -162,7 +162,8 @@
           </div>
           <button class="button">Register</button>
           <div class="login-signup">
-              Don't have an account? <a href="login.php" class="signup-txt">Signin</a>
+              Don't have an account?
+              <a class="signup-txt" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Signin</a>
           </div>
         </form>
       </div>
@@ -173,16 +174,16 @@
 <!-- Javascript -->
 <script>
   function togglePasswordVisibility(inputId) {
-            const passwordInput = document.getElementById(inputId);
-            const passwordToggleIcon = document.querySelector(`[onclick="togglePasswordVisibility('${inputId}')"]`);
-            if (passwordInput.type === 'password') {
-                passwordInput.type = 'text';
-                passwordToggleIcon.classList.remove('fa-eye-slash');
-                passwordToggleIcon.classList.add('fa-eye');
-            } else {
-                passwordInput.type = 'password';
-                passwordToggleIcon.classList.remove('fa-eye');
-                passwordToggleIcon.classList.add('fa-eye-slash');
-            }
-        }
+    const passwordInput = document.getElementById(inputId);
+    const passwordToggleIcon = document.querySelector(`[onclick="togglePasswordVisibility('${inputId}')"]`);
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        passwordToggleIcon.classList.remove('fa-eye-slash');
+        passwordToggleIcon.classList.add('fa-eye');
+    } else {
+        passwordInput.type = 'password';
+        passwordToggleIcon.classList.remove('fa-eye');
+        passwordToggleIcon.classList.add('fa-eye-slash');
+    }
+  }
 </script>
