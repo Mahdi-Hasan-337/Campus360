@@ -10,10 +10,10 @@
                         <div class="col-lg-4 col-md-6 p-5" style="">
                             <h5 style="text-align:center; margin-bottom: 2rem;">Follow Us</h5>
                             <ul class="list-inline" style="text-align:center">
-                                <li class="list-inline-item"><a href="#"><i class="fab fa-facebook" style="font-size: 2rem"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fab fa-twitter" style="font-size: 2rem"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.facebook.com"><i class="fab fa-facebook" style="font-size: 2rem"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.twitter.com"><i class="fab fa-twitter" style="font-size: 2rem"></i></a></li>
                                 <li class="list-inline-item"><a href="#"><i class="fab fa-instagram" style="font-size: 2rem"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest" style="font-size: 2rem"></i></a></li>
+                                <!-- <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest" style="font-size: 2rem"></i></a></li> -->
                             </ul>
                         </div>
 
@@ -22,13 +22,13 @@
                             <ul class="list-unstyled">
                                 <li>Address: Leading University, Kamalbazar, Sylhet, Bangladesh</li>
                                 <li>Phone: (+880) 1517-161066</li>
-                                <li>Email: example@gmail.com</li>
+                                <li>Email: campusdotcrew@gmail.com</li>
                             </ul>
                         </div>
                     </div>
                     <hr>
                     <div class="text-center">
-                        <p>&copy; 2023 Online Shop. All rights reserved.</p>
+                        <p>&copy; 2023 Campus 360. All rights reserved.</p>
                     </div>
                 </div>
             </footer>
