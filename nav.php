@@ -1,7 +1,4 @@
-<?php 
-  session_start(); 
-  // $isLoggedIn = isset($_SESSION['l_username']);
-?>
+<?php session_start(); ?>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 px-1">
   <div class="container-fluid">
@@ -91,165 +88,101 @@
           </ul>
         <?php } else { ?>
           <!-- Code for the not logged-in user -->
-          <a class='login-btn nav-link text-center btn-primary' href='login.php' tabindex='-1' aria-disabled='true'>Login</a>
+          <a class='login-btn nav-link text-center' data-bs-toggle="modal" href="#loginModal" role="button" tabindex='-1' aria-disabled='true'>Login</a>
         <?php } ?>
       </div>
     </div>
   </div>
 </nav>
 
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab:wght@700&family=Roboto:ital,wght@1,500&display=swap');
-        
-  .d-item{
-    text-align: center;
-  }
-  .logo{
-    width:4rem; 
-    height: 4rem; 
-    border-radius: 50%; 
-    margin-right: 1rem;
-  }
-  .logo-name{
-    font-family: 'Roboto Slab', serif;
-    text-transform: uppercase;
-    letter-spacing: .2rem;
-  }
-  .login-btn{font-family: 'Roboto Slab', serif;
-    color: white;
-    background: rgb(174, 174, 245);
-    padding: 0.5rem 1.5rem;
-    border-radius: 0.5rem;
-    margin: 0rem 0.5rem;
-    width: 6.5rem;
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 500;
-    text-transform: uppercase;
-  }
-  .login-btn:hover{
-    background: white;
-  }
-  .li-item{
-    color: white !important;
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-  }
-  .li-item:hover{
-    color: black !important;
-    text-transform: uppercase;
-  }
-  .n-item{
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.1rem;
-    /* margin: 0rem 0.5rem; */
-    padding: 0 1rem;
-    text-transform: uppercase;
-  }
-  .n-item:hover{
-    background: rgb(239, 232, 232);
-    border-radius: 0.5rem;
-    padding: 0 1rem;
-    color: black;
-    /* padding: 0 1rem; */
-  }
-  .s-icon{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    margin: 0rem 0.5rem;
-  }
-  .search-icon .btn{
-    color: white;
-  }
-  .div-search-icon{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  #search-menu {
-    padding: 5px;
-    width: 19rem;
-  }
-  #search-menu input {
-    width: 200px;
-  }
-  .element3 .dropdown-toggle::after {
-    content: none;
-  }
-  .s-li-icon .dropdown-toggle::after {
-    content: none;
-  }
-  .p-txt{
-    font-size: 1.1rem;
-    font-weight: bold;
-  }
-  .p-icon{
-    font-size: 1.2rem;
-  }
-  .p-span{
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-  .centered-dropdown-menu li {
-    line-height: 1;
-  }
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <form action="loginAction.php" method="post">
+          <h2>Login</h2>
+          <div class="input-box">
+            <input type="text" id="username" placeholder="Enter username" class="form-control" name="l_username" required>
+            <i class="fa-solid fa-envelope email"></i>
+          </div>
+          <div class="input-box">
+            <input type="password" placeholder="Enter Password" id="password" class="form-control" name="l_pass" required>
+            <i class="fa-solid fa-lock password"></i>
+            <i class="toggle-password fa-solid fa-eye-slash pwd_hide" onclick="togglePasswordVisibility('password')" style="color:#707070; font-size: 0.9rem;"></i>
+          </div>
+          <div class="option-field">
+            <span class="checkbox">
+              <input type="checkbox" id="check">
+              <label for="check">Remember me</label>
+            </span>
+            <a href="#" class="forgot_pass">Forgot Password?</a>
+          </div>
+          <button class="button">Login</button>
+          <div class="login-signup">
+            Already have an account? 
+            <a href="#registerModal" data-bs-toggle="modal" href="#exampleModalToggle" role="button" tabindex='-1' aria-disabled='true' class="signup-txt">
+              Signup
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
-  /* .reverse{
-    display:flex;
-    align-items:center;
-  } */
+<!-- Register Modal -->
+<div class="modal fade" id="registerModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <form action="#" method="post">
+          <h2>Register</h2>
+          <div class="input-box">
+            <input type="text" id="username" placeholder="Enter username" class="form-control" name="r_username" required>
+            <i class="fa-solid fa-user email"></i>
+          </div>
+          <div class="input-box">
+              <input type="email" id="email" placeholder="Enter email" class="form-control" name="r_email" required>
+              <i class="fa-solid fa-envelope email"></i>
+          </div>
+          <div class="input-box">
+              <input type="email" id="email" placeholder="Enter phone number" class="form-control" name="r_phone" required>
+              <i class="fa-solid fa-phone email"></i>
+          </div>
+          <div class="input-box">
+              <input type="password" placeholder="Enter Password" id="password" class="form-control" name="r_pass" required>
+              <i class="fa-solid fa-lock password"></i>
+              <i class="toggle-password fa-solid fa-eye-slash pwd_hide" onclick="togglePasswordVisibility('password')" style="color:#707070; font-size: 0.9rem;"></i>
+          </div>
+          <div class="input-box">
+              <input type="password" placeholder="Re-type Password" id="con_password" class="form-control" name="r_con_pass" required>
+              <i class="fa-solid fa-lock password"></i>
+              <i class="toggle-password fa-solid fa-eye-slash pwd_hide" onclick="togglePasswordVisibility('con_password')" style="color:#707070; font-size: 0.9rem;"></i>
+          </div>
+          <button class="button">Register</button>
+          <div class="login-signup">
+              Don't have an account? <a href="login.php" class="signup-txt">Signin</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
-  /* Responsive Design */
-  @media (max-width: 992px){
-    /* .element2{
-      margin:auto !important;
-    }
-    .reverse{
-        display: flex;
-        flex-direction: column-reverse;
-    } */
-    .n-item:hover{
-    background: none;
-    color: whitesmoke; 
-    }
-
-    .li-item:hover{
-    color: whitesmoke !important;
-    }
-    .reverse{
-      margin: 1rem 0rem;
-    }
-    .dropdown-menu{
-      width: 50%;
-      align-items: center;
-      background: rgb(225, 225, 225);
-    }
-    .d-item{
-      text-align: center;
-    }
-    .element3{
-      justify-content: center;
-      flex-direction: column;
-    }
-    .login-btn{
-      margin-top: 1rem;
-    }
-    .d-menu{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .d-item{
-      text-align: center;
-    }
-    .centered-dropdown-menu {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-  }
-</style>
+<!-- Javascript -->
+<script>
+  function togglePasswordVisibility(inputId) {
+            const passwordInput = document.getElementById(inputId);
+            const passwordToggleIcon = document.querySelector(`[onclick="togglePasswordVisibility('${inputId}')"]`);
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                passwordToggleIcon.classList.remove('fa-eye-slash');
+                passwordToggleIcon.classList.add('fa-eye');
+            } else {
+                passwordInput.type = 'password';
+                passwordToggleIcon.classList.remove('fa-eye');
+                passwordToggleIcon.classList.add('fa-eye-slash');
+            }
+        }
+</script>
