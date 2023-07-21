@@ -34,8 +34,8 @@
         </div>
 
         <!-- Controls -->
-        <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true" style="color:black"></span>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev" style="color:black">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </a>
         <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
@@ -59,5 +59,16 @@
         width: 100%;
         object-fit:contain;
         filter: brightness(0.7); 
+    }
+    span.carousel-control-prev-icon,
+    span.carousel-control-next-icon {
+        color:black !important;
+    }
+
+    /* Optional: Change the background color of the carousel control buttons */
+    .carousel-control-prev,
+    .carousel-control-next {
+        /* Replace 'your-desired-background-color' with the background color value you want */
+        background-color: rgba(245, 244, 244, 0.97);
     }
 </style>
