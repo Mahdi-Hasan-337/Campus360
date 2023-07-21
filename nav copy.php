@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php 
+// session_start(); 
+?>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 px-1">
   <div class="container-fluid">
@@ -51,39 +53,41 @@
       <div class="element3 d-flex" style="align-items: center;">
         <?php if (isset($_SESSION['l_username'])) { ?>
           <!-- Code for the logged-in user -->
-          <a class="li-item nav-link dropdown dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="images/campusdotcrew.png" class="rounded-circle" alt="Avatar" loading="lazy" style="height: 2.5rem; width: 2.5rem;">
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end centered-dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="align-items: center; padding: 1rem;">
-            <li>
-              <img src="images/campusdotcrew.png" class="text-center p-pic rounded-circle" alt="Avatar" loading="lazy" style="height: 3rem; width: 3rem; display: block; margin: 0 auto; text-align: center;">
-              <h4 class="my-3" style="font-weight: bold;">Campus Dot Crew</h4>
-            </li>
-            <hr>
-            <li>
-              <div class="d-flex bd-highlight mb-3">
-                <div class="p-2 bd-highlight"><i class="p-icon fa-solid fa-pen-to-square"></i></div>
-                <div class="p-2 bd-highlight p-txt">Update profile</div>
-                <div class="ms-auto p-2 bd-highlight"><span class="p-span">></span></div>
-              </div>
-            </li>
-            <hr>
-            <li>
-              <div class="d-flex bd-highlight mb-3">
-                <div class="p-2 bd-highlight"><i class="p-icon fa-solid fa-gear"></i></div>
-                <div class="p-2 bd-highlight p-txt">Settings</div>
-                <div class="ms-auto p-2 bd-highlight"><span class="p-span">></span></div>
-              </div>
-            </li>
-            <hr>
-            <li>
-              <div class="d-flex bd-highlight mb-3">
-                <div class="p-2 bd-highlight"><i class="p-icon fa-solid fa-arrow-right-from-bracket"></i></div>
-                <div class="p-2 bd-highlight p-txt">
-                  <a href='logout.php' class='' style='text-decoration: none;color: black;'>Logout</a>
-                </div>
-                <div class="ms-auto p-2 bd-highlight"><span class="p-span">></span></div>
-              </div>
+          <ul class="navbar-nav justify-content-center">          
+            <li class="s-li-icon nav-item dropdown d-menu">
+              <a class="nav-link dropdown dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="images/campusdotcrew.png" class="rounded-circle" alt="Avatar" loading="lazy" style="height: 2.5rem; width: 2.5rem;">
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end centered-dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="align-items: center; padding: 1rem;">
+                <li>
+                  <img src="images/campusdotcrew.png" class="text-center p-pic rounded-circle" alt="Avatar" loading="lazy" style="height: 3rem; width: 3rem; display: block; margin: 0 auto; text-align: center;">
+                  <h4 class="my-3" style="font-weight: bold;">Campus Dot Crew</h4>
+                </li>
+                <hr>
+                <li>
+                  <div class="d-flex bd-highlight mb-3">
+                    <div class="p-2 bd-highlight"><i class="p-icon fa-solid fa-pen-to-square"></i></div>
+                    <div class="p-2 bd-highlight p-txt">Update profile</div>
+                    <div class="ms-auto p-2 bd-highlight"><span class="p-span">></span></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="d-flex bd-highlight mb-3">
+                    <div class="p-2 bd-highlight"><i class="p-icon fa-solid fa-gear"></i></div>
+                    <div class="p-2 bd-highlight p-txt">Settings</div>
+                    <div class="ms-auto p-2 bd-highlight"><span class="p-span">></span></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="d-flex bd-highlight mb-3">
+                    <div class="p-2 bd-highlight"><i class="p-icon fa-solid fa-arrow-right-from-bracket"></i></div>
+                    <div class="p-2 bd-highlight p-txt">
+                      <a href='logout.php' class='' style='text-decoration: none;color: black;'>Logout</a>
+                    </div>
+                    <div class="ms-auto p-2 bd-highlight"><span class="p-span">></span></div>
+                  </div>
+                </li>
+              </ul>
             </li>
           </ul>
         <?php } else { ?>
@@ -136,7 +140,7 @@
     <div class="modal-content">
       <div class="modal-body">
         <form action="#" method="post">
-        <button type="button" class="modal-close-btn" style="" data-bs-dismiss="modal" aria-label="Close">&times</button>
+          <button type="button" class="modal-close-btn" style="" data-bs-dismiss="modal" aria-label="Close">&times</button>
           <!-- <button type="button" class="modal-close-btn btn-close" style="margin-right:2rem; margin-top:2rem;" data-bs-dismiss="modal" aria-label="Close"></button> -->
           <h2>Register</h2>
           <div class="input-box">
