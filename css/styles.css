@@ -166,6 +166,7 @@
   }
   h2{
       text-align: center;
+      margin-top: 1.5rem;
   }
   .input-box{
       position: relative;
@@ -262,11 +263,19 @@
     position: absolute;
     top: 0;
     right: 0;
-    padding: 0.5rem 1rem;
+    /* padding: 0.5rem 1rem; */
     background-color: transparent;
     border: none;
+    font-size:2rem;
+    margin-right:2rem;
+    margin-top:1.5rem;
   }
 
   .modal-body {
     position: relative;
+  }
+
+  .modal-close-btn:focus,
+  .modal-close-btn:active {
+    outline: none;
   }

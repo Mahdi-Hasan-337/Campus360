@@ -101,7 +101,7 @@
     <div class="modal-content">
       <div class="modal-body">
         <form action="loginAction.php" method="post">
-          <button type="button" class="modal-close-btn btn-close" style="margin-right:2rem; margin-top:2rem;" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="modal-close-btn" style="" data-bs-dismiss="modal" aria-label="Close">&times</button>
           <h2>Login</h2>
           <div class="input-box">
             <input type="text" id="username" placeholder="Enter username" class="form-control" name="l_username" required>
@@ -136,7 +136,8 @@
     <div class="modal-content">
       <div class="modal-body">
         <form action="#" method="post">
-          <button type="button" class="modal-close-btn btn-close" style="margin-right:2rem; margin-top:2rem;" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="modal-close-btn" style="" data-bs-dismiss="modal" aria-label="Close">&times</button>
+          <!-- <button type="button" class="modal-close-btn btn-close" style="margin-right:2rem; margin-top:2rem;" data-bs-dismiss="modal" aria-label="Close"></button> -->
           <h2>Register</h2>
           <div class="input-box">
             <input type="text" id="username" placeholder="Enter username" class="form-control" name="r_username" required>
