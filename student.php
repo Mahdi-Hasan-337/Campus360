@@ -127,7 +127,7 @@
         overflow: hidden;
     }
     .c-item{
-        height: 35rem;
+        height: 28rem;
         width:100%;
     }
     .c-img{
