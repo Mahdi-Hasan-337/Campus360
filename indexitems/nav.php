@@ -62,7 +62,7 @@
 
 <?php include'navitems/profilemodal.php'; ?>
 
-<?php include'navitems/updateprofilemodal.php'; ?>
+<!-- <?php include'navitems/updateprofilemodal.php'; ?> -->
 
 <!-- Javascript -->
 <script>
