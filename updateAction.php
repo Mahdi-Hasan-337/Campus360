@@ -8,6 +8,7 @@
         $phone = $_POST['phone'];
 
         $updateQuery = "UPDATE `register` SET `db_username`='$name', `db_email`='$email', `db_phone`='$phone' WHERE `id`='$id'";
+
         if (mysqli_query($conn, $updateQuery)) {
             header("Location: index.php");
             exit();

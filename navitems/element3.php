@@ -1,5 +1,5 @@
 <?php if (isset($_SESSION['l_username'])) { ?>
-          <!-- Code for the logged-in user -->
+          <!-- If logged in -->
           <ul class="navbar-nav justify-content-center">
             <li class="nav-item dropdown d-menu">
               <a class="li-item nav-link dropdown dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -46,6 +46,6 @@
             </li>
           </ul>
         <?php } else { ?>
-          <!-- Code for the not logged-in user -->
+          <!-- If not logged in -->
           <a class="login-btn nav-link text-center" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Login</a>
         <?php } ?>
