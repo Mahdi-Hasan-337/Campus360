@@ -1,4 +1,4 @@
-<?php if (isset($_SESSION['l_username'])) { ?>
+<?php if (isset($_SESSION['l_email'])) { ?>
           <!-- If logged in -->
           <ul class="navbar-nav justify-content-center">
             <li class="nav-item dropdown d-menu">
@@ -11,10 +11,13 @@
               </li>
               <li class="text-center" style="font-size:1.5rem; font-weight:bold;">
                 <?php
-                  if (isset($_SESSION['l_username'])) {
-                    echo $_SESSION['l_username'];
-                  } else {
-                    echo "Campus Dot Crew";
+                  include 'config.php';
+                  $email = $_SESSION['l_email'];
+                  $allData = mysqli_query($conn, "SELECT * FROM `register` WHERE db_email='$email'");
+
+                  while($row = mysqli_fetch_array($allData))
+                  {
+                    echo "$row[db_username]";
                   }
                 ?>
               </li>

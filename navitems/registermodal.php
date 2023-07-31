@@ -5,6 +5,13 @@
       <div class="modal-body">
         <form action="registerAction.php" method="post">
         <button type="button" class="modal-close-btn" style="" data-bs-dismiss="modal" aria-label="Close">&times</button>
+          <div class="alert">
+            <?php if(isset($_SESSION['status'])) { ?>
+                <div class="alert alert-danger">
+                    <h5><?= $_SESSION['status'] ?></h5>
+                </div>
+            <?php unset($_SESSION['status']); } ?>
+          </div>
           <h2>Register</h2>
           <div class="input-box">
             <input type="text" id="username" placeholder="Enter username" class="form-control" name="r_username" required>
@@ -28,10 +35,10 @@
               <i class="fa-solid fa-lock password"></i>
               <i class="toggle-password fa-solid fa-eye-slash pwd_hide" onclick="togglePasswordVisibility('con_password')" style="color:#707070; font-size: 0.9rem;"></i>
           </div>
-          <button class="button">Register</button>
+          <button class="button" name="register_btn">Register</button>
           <div class="login-signup">
               Don't have an account?
-              <a class="signup-txt" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Signin</a>
+              <a class="signup-txt" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal" style="cursor:pointer;">Signin</a>
           </div>
         </form>
       </div>

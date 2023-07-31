@@ -5,8 +5,8 @@
         <div class="modal-body">
           <?php
             include 'config.php';
-            $email = $_SESSION['l_email'];
-            $allData = mysqli_query($conn, "SELECT * FROM `register` WHERE db_email='$email'");
+            $username = $_SESSION['l_username'];
+            $allData = mysqli_query($conn, "SELECT * FROM `register` WHERE db_username='$username'");
 
             while($row = mysqli_fetch_array($allData))
             {
