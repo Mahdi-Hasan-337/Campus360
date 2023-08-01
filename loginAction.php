@@ -9,18 +9,15 @@
             $l_email = mysqli_real_escape_string($conn, $_POST['l_email']);
             $l_pass = mysqli_real_escape_string($conn, $_POST['l_pass']);
 
-            //$query = "SELECT * FROM register WHERE db_email='$l_email' AND db_pass='$l_pass' LIMIT 1";
-
-            $query = "SELECT * FROM `register` WHERE db_email='$l_email'";
-
+            $query = "SELECT * FROM `register` WHERE db_email='$l_email' AND verify_status = '1' LIMIT 1";
+            
             $result = mysqli_query($conn, $query);
 
             if(mysqli_num_rows($result)>0)
             {
                 $row = mysqli_fetch_assoc($result);
                 $db_pass = $row['db_pass'];
-                //echo $row['verify_status'];
-                if($row['verify_status'] == "1" && (password_verify($l_pass, $db_pass)))
+                if ($row['verify_status'] == "1" && (password_verify($l_pass, $db_pass)))
                 {
                     $_SESSION['l_email'] = $l_email;
                     $_SESSION['status'] = "Successfully Logged in";
@@ -28,7 +25,7 @@
                     exit(0);
                 } 
                 else{
-                    $_SESSION['status'] = "Something Error.";
+                    $_SESSION['status'] = "From Login ";
                     header("Location:index.php");
                     exit(0);
                 }

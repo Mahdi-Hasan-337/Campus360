@@ -10,7 +10,7 @@
             <i class="fa-solid fa-envelope email"></i>
           </div>
           <button class="button" name="remail_btn">Resend</button>
-          <button class="button" style="background-color:#f7f7f7">Close</button>
+          <button class="button" style="background-color:#f7f7f7" data-bs-dismiss="modal">Close</button>
         </form>
       </div>
     </div>

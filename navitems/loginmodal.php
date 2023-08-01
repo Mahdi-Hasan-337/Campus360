@@ -1,4 +1,4 @@
-<!-- Login Modal -->
+<!-- Reset Password Modal -->
 <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
@@ -27,7 +27,7 @@
               <input type="checkbox" id="check">
               <label for="check">Remember me</label>
             </span>
-            <a href="#" class="forgot_pass">Forgot Password?</a>
+            <a class="forgot_pass" data-bs-target="#reset_pass_modal" data-bs-toggle="modal" data-bs-dismiss="modal" style="cursor:pointer; font-style:italic;">Forgot Password?</a>
           </div>
           <button class="button" name="login_btn">Login</button>
           <div class="login-signup">
