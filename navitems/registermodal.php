@@ -4,7 +4,7 @@
     <div class="modal-content">
       <div class="modal-body">
         <form action="registerAction.php" method="post">
-        <button type="button" class="modal-close-btn" style="" data-bs-dismiss="modal" aria-label="Close">&times</button>
+        <button type="button" class="modal-close-btn" data-bs-dismiss="modal" aria-label="Close">&times</button>
           <div class="alert">
             <?php if(isset($_SESSION['status'])) { ?>
                 <div class="alert alert-danger">

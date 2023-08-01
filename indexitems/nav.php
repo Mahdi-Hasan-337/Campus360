@@ -58,3 +58,4 @@
   <?php include'navitems/loginmodal.php'; ?>
   <?php include'navitems/registermodal.php'; ?>
   <?php include'navitems/logoutmodal.php'; ?>
+  <?php include'navitems/resend_email_modal.php' ?>

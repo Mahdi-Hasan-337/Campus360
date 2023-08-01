@@ -8,7 +8,7 @@
 
     require 'vendor/autoload.php';
 
-    function sendemail_verify($name,$email,$verify_token)
+    function sendemail_verify($r_username,$r_email,$verify_token)
     {
         $mail = new PHPMailer(true);
         $mail->isSMTP(); 
@@ -22,8 +22,8 @@
         $mail->Port       = 587;
 
         //Recipients
-        $mail->setFrom('campusdotcrew@gmail.com', $name);
-        $mail->addAddress($email);
+        $mail->setFrom('campusdotcrew@gmail.com', $r_username);
+        $mail->addAddress($r_email);
         
         $mail->isHTML(true); 
         $mail->Subject = 'Email Verification from Campus Dot Crew';

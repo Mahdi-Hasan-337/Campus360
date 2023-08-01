@@ -4,7 +4,7 @@
     <div class="modal-content">
       <div class="modal-body">
         <form action="loginAction.php" method="post">
-          <button type="button" class="modal-close-btn" style="" data-bs-dismiss="modal" aria-label="Close">&times</button>
+          <button type="button" class="modal-close-btn" data-bs-dismiss="modal" aria-label="Close">&times</button>
           <div class="alert">
             <?php if(isset($_SESSION['status'])) { ?>
                 <div class="alert alert-danger">
@@ -14,7 +14,7 @@
           </div>
           <h2>Login</h2>
           <div class="input-box">
-            <input type="email" id="email" placeholder="Enter username" class="form-control" name="l_email" required>
+            <input type="email" id="email" placeholder="Enter Email" class="form-control" name="l_email" required>
             <i class="fa-solid fa-envelope email"></i>
           </div>
           <div class="input-box">
@@ -29,10 +29,15 @@
             </span>
             <a href="#" class="forgot_pass">Forgot Password?</a>
           </div>
-          <button class="button">Login</button>
+          <button class="button" name="login_btn">Login</button>
           <div class="login-signup">
             Already have an account?
-            <a class="signup-txt" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Signup</a>
+            <a class="signup-txt" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal" style="cursor:pointer">Signup</a>
+          </div>
+          <hr>
+          <div class="resend-div text-center">
+            You are already registerd but not verified? Click
+            <a class="signup-txt" data-bs-target="#resend_email_modal" data-bs-toggle="modal" data-bs-dismiss="modal" style="cursor:pointer; font-style:italic;">here</a>
           </div>
         </form>
       </div>
