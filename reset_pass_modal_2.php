@@ -81,8 +81,8 @@
 
     <div class="input-box">
       <input type="email" name="email" value="<?php if (isset($_GET['email'])) {
-                                                echo $_GET['email'];
-                                              } ?>" class="form-control" readonly>
+        echo $_GET['email'];
+      } ?>" class="form-control" readonly>
       <i class="fa-solid fa-envelope email"></i>
     </div>
 

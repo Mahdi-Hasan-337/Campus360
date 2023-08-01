@@ -71,55 +71,67 @@
         }
     } else { }
 
-    if (isset($_POST['uppass_btn'])) {
+    if(isset($_POST['uppass_btn']))
+    {
         $email = $_POST['email'];
         $new_password = $_POST['new_password'];
         $confirm_password = $_POST['confirm_password'];
         $token = $_POST['password_token'];
-    
-        // Define the password regex pattern
-        $pass_pattern = "/((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&*_+><])).{6,}/";
-    
-        if (!empty($token)) {
-            if (!empty($email) && !empty($new_password) && !empty($confirm_password)) {
-                if ($new_password === $confirm_password) {
-                    if (preg_match($pass_pattern, $new_password)) {
+
+        if(!empty($token))
+        {
+            if(!empty($email) && !empty($new_password) && !empty($confirm_password))
+            {
+                // checing token is valid or not
+                $check_token = "SELECT verify_token FROM register WHERE verify_token='$token' LIMIT 1";
+                $check_token_run = mysqli_query($conn, $check_token);
+
+                if(mysqli_num_rows($check_token_run) > 0)
+                {
+                    if($new_password == $confirm_password)
+                    {
                         $hashed_password = password_hash($new_password, PASSWORD_DEFAULT);
                         $update_password = "UPDATE register SET db_pass='$hashed_password' WHERE verify_token='$token' LIMIT 1";
                         $update_password_run = mysqli_query($conn, $update_password);
-                        if ($update_password_run) {
+                        if($update_password_run)
+                        {
                             $new_token = md5(rand()) . "campus360";
-                            $update_to_new_token = "UPDATE register SET verify_token='$new_token' WHERE verify_token='$token' LIMIT 1";
-                            $update_to_new_token_run = mysqli_query($conn, $update_to_new_token);
-    
+                            $update_to_new_token = "UPDATE register SET verify_token='$new_token' WHERE verify_token='$token' LIMIT 1";                      $update_to_new_token_run = mysqli_query($conn, $update_to_new_token);
+
                             $_SESSION['status'] = "New Password Updated Successfully";
                             header("Location:index.php");
                             exit(0);
-                        } else {
+                        }
+                        else{
                             $_SESSION['status'] = "Didn't update password....!! Something went Wrong";
                             header("Location:index.php?token=$token&email=$email");
                             exit(0);
                         }
-                    } else {
-                        $_SESSION['status'] = "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character (@ # $ % ^ & * !)";
+                    }
+                    else{
+                        $_SESSION['status'] = "Password and Confrim Password Doesn't match";
                         header("Location:index.php?token=$token&email=$email");
                         exit(0);
                     }
-                } else {
-                    $_SESSION['status'] = "Password and Confirm Password Don't match";
+                }
+                else{
+                    $_SESSION['status'] = "invalid Token";
                     header("Location:index.php?token=$token&email=$email");
                     exit(0);
                 }
-            } else {
+            }
+            else
+            {
                 $_SESSION['status'] = "All fields are mandatory";
                 header("Location:index.php?token=$token&email=$email");
                 exit(0);
             }
-        } else {
-            $_SESSION['status'] = "No token available";
+        }
+        else
+        {
+            $_SESSION['status'] = "no token available";
             header('Location:index.php');
             exit(0);
         }
     }
-    
 ?>
