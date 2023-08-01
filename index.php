@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Campus Dot Crew</title>
     <?php
-    $cssFile = isset($_SESSION['l_username']) ? 'after_login_styles.css' : 'before_login_styles.css';
+    $cssFile = isset($_SESSION['l_email']) ? 'after_login_styles.css' : 'before_login_styles.css';
     echo '<link rel="stylesheet" type="text/css" href="css/' . $cssFile . '">';
     ?>
   </head>
@@ -71,5 +71,13 @@
     });
   </script>
 
+  <!-- Delete Jquery -->
+  <script>
+        $(document).ready(function(){
+            $('.deletebtn').on('click', function() {
+                $('#deletemodal').modal('show');
+            });
+        });
+    </script>
 </body>
 </html>

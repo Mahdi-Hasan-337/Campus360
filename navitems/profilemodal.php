@@ -18,6 +18,7 @@
                   <h5>$row[db_email]</h5>
                   <h5>$row[db_phone]</h5>
                   <button type='button' class='col-12 btn btn-primary mt-3 p-2 updatebtn' data-user-id='$row[id]' data-bs-dismiss='modal' style='margin-right:1rem;'><i class='fa-solid fa-pen-to-square'></i> Update Profile</button>
+                  <button type='button' class='col-12 btn btn-danger mt-3 p-2 deletebtn' data-user-id='$row[id]' data-bs-dismiss='modal' style='margin-right:1rem;'><i class='fa-solid fa-trash-can-xmark'></i> Delete your account</button>
                 </div>
               ";
             }

@@ -60,4 +60,6 @@
   <?php include'navitems/logoutmodal.php'; ?>
   <?php include'navitems/resend_email_modal.php'; ?>
   <?php include'navitems/reset_pass_modal.php'; ?>
-  <?php //include'navitems/reset_pass_modal_2.php'; ?>
+  <?php //include'reset_pass_modal_2.php'; ?>
+  <?php include'navitems/deleteprofilemodal.php'; ?>
+  <?php include'navitems/passtodltmodal.php';?>
