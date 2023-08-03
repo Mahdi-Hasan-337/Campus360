@@ -3,6 +3,7 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-body">
+          <button type="button" class="modal-close-btn" data-bs-dismiss="modal" aria-label="Close">&times</button>
           <?php
             include 'config.php';
             $email = $_SESSION['l_email'];

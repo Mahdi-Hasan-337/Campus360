@@ -22,7 +22,7 @@
               </ul>
             </li>
             <li class="n-item nav-item text-center">
-              <a class="li-item nav-link" href="#">Job Preparation</a>
+              <a class="li-item nav-link" href="content.php">Job Preparation</a>
             </li>
             <li class="n-item nav-item text-center">
               <a class="li-item nav-link" href="#" tabindex="-1" aria-disabled="true">Routine</a>
