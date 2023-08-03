@@ -1,4 +1,4 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>  
 
     <!-- Javascript -->
@@ -18,33 +18,33 @@
       }
     </script>
 
-  <!-- Update Jquery -->
-  <script>
-    $(document).ready(function() {
-      $(".updatebtn").on("click", function() {
-        $("#updateprofilemodal").modal("show");
+    <!-- Update Jquery -->
+    <script>
+      $(document).ready(function() {
+        $(".updatebtn").on("click", function() {
+          $("#updateprofilemodal").modal("show");
 
-        var userId = $(this).data("user-id");
+          var userId = $(this).data("user-id");
 
-        var name = $("#profileModal h2").text();
-        var email = $("#profileModal h5:eq(0)").text();
-        var phone = $("#profileModal h5:eq(1)").text();
+          var name = $("#profileModal h2").text();
+          var email = $("#profileModal h5:eq(0)").text();
+          var phone = $("#profileModal h5:eq(1)").text();
 
-        $("#update_id").val(userId);
-        $("#name").val(name);
-        $("#email").val(email);
-        $("#phone").val(phone);
+          $("#update_id").val(userId);
+          $("#name").val(name);
+          $("#email").val(email);
+          $("#phone").val(phone);
+        });
       });
-    });
-  </script>
+    </script>
 
-  <!-- Delete Jquery -->
-  <script>
+    <!-- Delete Jquery -->
+    <script>
         $(document).ready(function(){
             $('.deletebtn').on('click', function() {
                 $('#deletemodal').modal('show');
             });
         });
     </script>
-</body>
+  </body>
 </html>

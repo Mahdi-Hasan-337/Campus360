@@ -21,23 +21,27 @@
                 {
                     $_SESSION['l_email'] = $l_email;
                     $_SESSION['status'] = "Successfully Logged in";
+                    echo "<script>alert('Successfully Logged in')</script>";
                     header("Location:index.php");
                     exit(0);
                 } 
                 else{
-                    $_SESSION['status'] = "From Login ";
+                    $_SESSION['status'] = "Something Error";
+                    echo "<script>alert('Something Error')</script>";
                     header("Location:index.php");
                     exit(0);
                 }
             } 
             else{
                 $_SESSION['status'] = "Invalid email or password";
+                echo "<script>alert('Invalid email or password')</script>";
                 header("Location:index.php");
                 exit(0);
             }
         }
         else{
             $_SESSION['status'] = "All fields are mandatory";
+            echo "<script>alert('All fields are mandatory')</script>";
             header("Location:index.php");
             exit(0);
         }

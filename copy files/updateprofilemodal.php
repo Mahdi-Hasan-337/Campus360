@@ -1,23 +1,8 @@
 <!-- Update Profile Modal -->
-
-<?php
-  include('config.php');
-
-  if (isset($_SESSION['l_email'])) {
-      $l_email = $_SESSION['l_email'];
-      $query = "SELECT * FROM `register` WHERE db_email='$l_email' LIMIT 1";
-      $result = mysqli_query($conn, $query);
-
-      if (mysqli_num_rows($result) > 0) {
-          $row = mysqli_fetch_assoc($result);
-      }
-  }
-?>
-
 <div class="modal fade" id="updateprofilemodal" aria-hidden="true" aria-labelledby="updateprofilemodalLabel" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <form action="updateAction.php" method="POST" enctype="multipart/form-data">
+      <form action="updateAction.php" method="POST">
 
         <div class="mb-4">
             <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -26,18 +11,12 @@
 
         <div class="modal-body">
 
-        <input type="hidden" name="update_id" id="update_id">
-    
-        <div class="mb-3">
-          <?php
-            $image_path = 'uploads/' . $row['db_image'];
-            $default_image = 'images/campusdotcrew.png';
-            $image_src = file_exists($image_path) ? $image_path : $default_image;
-          ?>
-          <img width="150px" src="<?php echo $image_src; ?>" id="image-preview" alt="Image Preview"
-            style="display: block; margin: 1rem auto;">
-          <input type="file" name="image" id="image" class="form-control" onchange="previewImage();" accept="image/*">
-        </div>
+          <input type="hidden" name="update_id" id="update_id">
+          
+          <div class="mb-3">
+            <img width="150px" src="images/campusdotcrew.png" id="image-preview" alt="Image Preview" style="display: block; margin: 1rem auto;">
+            <input type="file" name="image" id="image" class="form-control" placeholder="Enter Phone">
+          </div>
 
           <div class="row g-3 align-items-center mb-3">
             <div class="col-3">
@@ -73,24 +52,3 @@
     </div>
   </div>
 </div>
-
-<!-- JavaScript for image preview -->
-<script>
-  function previewImage() {
-    const fileInput = document.getElementById('image');
-    const imagePreview = document.getElementById('image-preview');
-
-    const file = fileInput.files[0];
-    const reader = new FileReader();
-
-    reader.onloadend = function () {
-      imagePreview.src = reader.result;
-    };
-
-    if (file) {
-      reader.readAsDataURL(file);
-    } else {
-      imagePreview.src = 'images/campusdotcrew.png';
-    }
-  }
-</script>

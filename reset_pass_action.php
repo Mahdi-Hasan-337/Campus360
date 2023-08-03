@@ -93,30 +93,36 @@
                             $update_to_new_token_run = mysqli_query($conn, $update_to_new_token);
     
                             $_SESSION['status'] = "New Password Updated Successfully";
+                            echo "<script>alert('New Password Updated Successfully')</script>";
                             header("Location:index.php");
                             exit(0);
                         } else {
                             $_SESSION['status'] = "Didn't update password....!! Something went Wrong";
+                            echo "<script>alert('Didn't update password....!! Something went Wrong')</script>";
                             header("Location:index.php?token=$token&email=$email");
                             exit(0);
                         }
                     } else {
                         $_SESSION['status'] = "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character (@ # $ % ^ & * !)";
+                        echo "<script>alert('Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character (@ # $ % ^ & * !)')</script>";
                         header("Location:index.php?token=$token&email=$email");
                         exit(0);
                     }
                 } else {
                     $_SESSION['status'] = "Password and Confirm Password Don't match";
+                    echo "<script>alert('Password and Confirm Password Don't match')</script>";
                     header("Location:index.php?token=$token&email=$email");
                     exit(0);
                 }
             } else {
                 $_SESSION['status'] = "All fields are mandatory";
+                echo "<script>alert('All fields are mandatory')</script>";
                 header("Location:index.php?token=$token&email=$email");
                 exit(0);
             }
         } else {
             $_SESSION['status'] = "No token available";
+            echo "<script>alert('No token available')</script>";
             header('Location:index.php');
             exit(0);
         }

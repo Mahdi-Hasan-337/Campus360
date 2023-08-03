@@ -101,9 +101,11 @@
             {
                 sendemail_verify("$r_username","$r_email","$verify_token");
                 $_SESSION['status'] = "Registration Successful..!! Please verify your Email Address";
+                echo "<script>alert('Registration Successful..!! Please verify your Email Address')</script>";
                 header('Location:index.php');
             } else{
                 $_SESSION['status'] = "Registration failed";
+                echo "<script>alert('Registration failed')</script>";
                 header('Location:index.php');
             }
         }

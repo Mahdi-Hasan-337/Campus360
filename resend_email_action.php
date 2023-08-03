@@ -56,12 +56,15 @@
                     $verify_token = $row['verify_token'];
                     resend_email_verify($name, $email, $verify_token);
                     $_SESSION['status'] = "Verification Email Link has been sent to your email";
+                    echo "<script>alert('Verification Email Link has been sent to your email')</script>";
+                    
                     header('Location:index.php');
                     exit(0);
                 }
                 else
                 {
                     $_SESSION['status'] = "Email already verified. Please login now";
+                    echo "<script>alert('Email already verified. Please login now')</script>";
                     header('Location:index.php');
                     exit(0);
                 }
@@ -69,6 +72,7 @@
             else
             {
                 $_SESSION['status'] = "Email is not registered. Please register now";
+                echo "<script>alert('Email is not registered. Please register now')</script>";
                 header('Location:index.php');
                 exit(0);
             }
@@ -76,6 +80,7 @@
         else
         {
             $_SESSION['status'] = "Please enter the email field";
+            echo "<script>alert('Please enter the email field')</script>";
             header('Location:index.php');
             exit(0);
         }
