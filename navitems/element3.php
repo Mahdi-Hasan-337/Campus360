@@ -46,10 +46,7 @@
       </li>
     </li>
   </ul>
-
 <?php } else { ?>
-
   <!-- If not logged in -->
   <a class="login-btn nav-link text-center" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Login</a>
-
-  <?php } ?>
+<?php } ?>

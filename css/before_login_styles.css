@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab:wght@700&family=Roboto:ital,wght@1,500&display=swap');
         
   /* Navbar */
-  .d-item{
-    text-align: center;
-  }
   .logo{
     width:4rem; 
     height: 4rem; 
@@ -15,20 +12,33 @@
     text-transform: uppercase;
     letter-spacing: .2rem;
   }
-  .login-btn{font-family: 'Roboto Slab', serif;
-    color: white;
-    background: rgb(174, 174, 245);
-    padding: 0.5rem 1.5rem;
+  .login-btn{
+    /* 
+    color:white; 
+    font-size:1rem;
+    font-family: 'Poppins', sans-serif; 
+    text-transform: uppercase; 
+    width: 5rem; 
     border-radius: 0.5rem;
-    margin: 0rem 0.5rem;
-    width: 6.5rem;
-    font-size: 1.1rem;
+    font-weight: 500;
+    background: rgb(174, 174, 245); 
+    */
+
+    font-family: 'Roboto Slab', serif;
+    color: white;
+    /* background: rgb(174, 174, 245); */
+    /* padding: 0.5rem 1.5rem; */
+    border-radius: 0.5rem;
+    /* margin: 0rem 0.5rem; */
+    width: 5rem;
+    font-size: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 500;
     text-transform: uppercase;
   }
+
   .login-btn:hover{
     background: white;
   }
@@ -43,14 +53,14 @@
   }
   .n-item{
     font-family: 'Poppins', sans-serif;
-    font-size: 1.1rem;
-    padding: 0 1rem;
+    font-size: 1rem;
+    padding: 0 0.4rem;
     text-transform: uppercase;
   }
   .n-item:hover{
     background: rgb(239, 232, 232);
     border-radius: 0.5rem;
-    padding: 0 1rem;
+    padding: 0 0.4rem;
     color: black;
   }
   .s-icon{
@@ -103,9 +113,20 @@
     display: flex;
     align-items: center;
   }
+  .reverse{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   /* Responsive Design */
-  @media (max-width: 992px){
+  @media (max-width: 991px){
     .n-item:hover{
     background: none;
     color: whitesmoke; 
@@ -147,7 +168,7 @@
     }
   }
 
-  /* Login Modal & Register Modal */
+  /* ==================== Login Modal & Register Modal ============================*/
   form{
       padding: 2rem;
       /* width: 25rem; */

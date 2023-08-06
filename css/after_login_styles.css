@@ -15,7 +15,18 @@
   text-transform: uppercase;
   letter-spacing: .2rem;
 }
-.login-btn{font-family: 'Roboto Slab', serif;
+.login-btn{
+  font-family: 'Roboto Slab', serif;
+  color: white;
+  border-radius: 0.5rem;
+  width: 5rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  text-transform: uppercase;
+  /* font-family: 'Roboto Slab', serif;
   color: white;
   background: rgb(174, 174, 245);
   padding: 0.5rem 1.5rem;
@@ -27,7 +38,7 @@
   align-items: center;
   justify-content: center;
   font-weight: 500;
-  text-transform: uppercase;
+  text-transform: uppercase; */
 }
 .login-btn:hover{
   background: white;
@@ -43,17 +54,15 @@
 }
 .n-item{
   font-family: 'Poppins', sans-serif;
-  font-size: 1.1rem;
-  /* margin: 0rem 0.5rem; */
-  padding: 0 1rem;
+  font-size: 1rem;
+  padding: 0 0.4rem;
   text-transform: uppercase;
 }
 .n-item:hover{
   background: rgb(239, 232, 232);
   border-radius: 0.5rem;
-  padding: 0 1rem;
+  padding: 0 0.4rem;
   color: black;
-  /* padding: 0 1rem; */
 }
 .s-icon{
   display: flex;
@@ -111,8 +120,14 @@ display:flex;
 align-items:center;
 }
 
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Responsive Design */
-@media (max-width: 992px){
+@media (max-width: 991px){
   .n-item:hover{
   background: none;
   color: whitesmoke; 
@@ -280,11 +295,9 @@ h2{
   margin-right:2rem;
   margin-top:1.5rem;
 }
-
 .modal-body {
   position: relative;
 }
-
 .modal-close-btn:focus,
 .modal-close-btn:active {
   outline: none;
