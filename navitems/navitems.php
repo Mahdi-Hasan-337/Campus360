@@ -7,7 +7,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <div class="reverse ms-auto">
-        <div class="element2 ms-auto">
+        <div class="element2">
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="n-item nav-item text-center">
               <a class="li-item nav-link active home" aria-current="page" href="#">Home</a>

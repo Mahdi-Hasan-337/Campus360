@@ -15,6 +15,6 @@
         } else {
             $image_path = $default_image;
         }
-        echo "<img src='$image_path' alt='Avatar' class='img-fluid rounded-circle'  style='height: 3rem; width: 3rem; display: block; margin: 0 auto; text-align: center;'>";
+        echo "<img src='$image_path' alt='Avatar' class='img-fluid rounded-circle'  style='height: 2rem; width: 2rem; display: block; margin: 0 auto; text-align: center;'>";
     }
 ?>
