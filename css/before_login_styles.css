@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab:wght@700&family=Roboto:ital,wght@1,500&display=swap');
-        
+
   /* Navbar */
   .d-item{
     text-align: center;
   }
   .logo{
-    width:4rem; 
-    height: 4rem; 
+    width:3.5rem; 
+    height: 3.5rem; 
     border-radius: 50%; 
     margin-right: 1rem;
   }
@@ -42,13 +42,13 @@
   .n-item{
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
-    padding: 0 0.4rem;
+    /* padding: 0 0.3rem; */
     text-transform: uppercase;
   }
   .n-item:hover{
     background: rgb(239, 232, 232);
     border-radius: 0.5rem;
-    padding: 0 0.4rem;
+    /* padding: 0 0.3rem; */
     color: black;
   }
   .s-icon{
@@ -67,15 +67,13 @@
     justify-content: center;
   }
    #search-menu {
-    padding: 5px;
+    /* padding: 5px; */
     width: 30rem;
   }
   #search-menu input {
     width: 28rem;
   }
-  .element3 .dropdown-toggle::after {
-    content: none;
-  }
+  .element3 .dropdown-toggle::after,
   .s-li-icon .dropdown-toggle::after {
     content: none;
   }

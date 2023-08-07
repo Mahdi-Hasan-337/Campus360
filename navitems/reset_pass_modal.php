@@ -4,6 +4,7 @@
     <div class="modal-content">
       <div class="modal-body" style="padding:2rem;">
         <form action="reset_pass_action.php" method="post">
+          <button type="button" class="modal-close-btn" data-bs-dismiss="modal" aria-label="Close">&times</button>
           <h2 class="text-center">Reset Password</h2>
           <div class="input-box">
             <input type="email" id="repass_email" placeholder="Enter your Email Address" class="form-control" name="repass_email" required>

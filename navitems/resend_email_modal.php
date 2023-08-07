@@ -4,6 +4,7 @@
     <div class="modal-content">
       <div class="modal-body" style="padding:2rem;">
         <form action="resend_email_action.php" method="post">
+          <button type="button" class="modal-close-btn" data-bs-dismiss="modal" aria-label="Close">&times</button>
           <h2 class="text-center">Resend Email</h2>
           <div class="input-box">
             <input type="email" id="remail" placeholder="Enter your Email Address" class="form-control" name="remail" required>

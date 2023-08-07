@@ -42,13 +42,13 @@
 .n-item{
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
-  padding: 0 0.4rem;
+  /* padding: 0 0.3rem; */
   text-transform: uppercase;
 }
 .n-item:hover{
   background: rgb(239, 232, 232);
   border-radius: 0.5rem;
-  padding: 0 0.4rem;
+  /* padding: 0 0.3rem; */
   color: black;
 }
 .s-icon{
