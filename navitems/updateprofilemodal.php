@@ -73,24 +73,3 @@
     </div>
   </div>
 </div>
-
-<!-- JavaScript for image preview -->
-<script>
-  function previewImage() {
-    const fileInput = document.getElementById('image');
-    const imagePreview = document.getElementById('image-preview');
-
-    const file = fileInput.files[0];
-    const reader = new FileReader();
-
-    reader.onloadend = function () {
-      imagePreview.src = reader.result;
-    };
-
-    if (file) {
-      reader.readAsDataURL(file);
-    } else {
-      imagePreview.src = 'images/campusdotcrew.png';
-    }
-  }
-</script>

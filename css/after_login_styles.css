@@ -113,6 +113,18 @@ align-items:center;
   justify-content: center;
 }
 
+  /* Hide the alert after 20s */
+  .auto-hide-alert {
+    animation: hideAlert 20s forwards;
+  }
+
+  @keyframes hideAlert {
+    to {
+        opacity: 0;
+        display: none;
+    }
+  }
+
 /* Responsive Design */
 @media (max-width: 992px){
   .n-item:hover{

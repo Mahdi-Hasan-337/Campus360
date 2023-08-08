@@ -1,7 +1,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>  
 
-    <!-- Javascript -->
+    <!-- Passowrd Eye Toggole -->
     <script>
       function togglePasswordVisibility(inputId) {
         const passwordInput = document.getElementById(inputId);
@@ -38,6 +38,27 @@
       });
     </script>
 
+    <!-- Image preview -->
+    <script>
+      function previewImage() {
+        const fileInput = document.getElementById('image');
+        const imagePreview = document.getElementById('image-preview');
+
+        const file = fileInput.files[0];
+        const reader = new FileReader();
+
+        reader.onloadend = function () {
+          imagePreview.src = reader.result;
+        };
+
+        if (file) {
+          reader.readAsDataURL(file);
+        } else {
+          imagePreview.src = 'images/campusdotcrew.png';
+        }
+      }
+    </script>
+
     <!-- Delete Jquery -->
     <script>
         $(document).ready(function(){
@@ -47,6 +68,7 @@
         });
     </script>
 
+    <!-- Dashboard -->
     <script>
         var el = document.getElementById("wrapper");
         var toggleButton = document.getElementById("menu-toggle");
@@ -56,14 +78,17 @@
         };
     </script>
 
+    <!-- Alert container related -->
     <script>
-        var el = document.getElementById("wrapper");
-        var toggleButton = document.getElementById("menu-toggle");
-
-        toggleButton.onclick = function () {
-            el.classList.toggle("toggled");
-        };
+        document.addEventListener('DOMContentLoaded', function() {
+            var alertContainer = document.querySelector('.alert-container');
+            if (alertContainer) {
+                alertContainer.classList.add('show');
+                setTimeout(function() {
+                    alertContainer.classList.remove('show');
+                }, 3000);
+            }
+        });
     </script>
-
   </body>
 </html>

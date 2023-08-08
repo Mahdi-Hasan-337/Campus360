@@ -1,4 +1,4 @@
-<section class="carousel-section" style="margin: 0rem 0rem">
+<section class="carousel-section" style="margin: 0.5rem 0rem">
     <div id="myCarousel" class="carousel slide text-center carousel-dark" data-bs-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
