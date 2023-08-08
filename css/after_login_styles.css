@@ -114,7 +114,7 @@ align-items:center;
 }
 
 /* Hide the alert after 20s */
-.auto-hide-alert {
+.auto-hide {
   animation: hideAlert 20s forwards;
 }
 

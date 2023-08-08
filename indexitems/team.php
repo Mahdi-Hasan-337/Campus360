@@ -1,4 +1,4 @@
-<section class="student-section" style="margin: 2rem 0rem">
+<section class="student-section" style="margin: 0rem 0rem; border: 0.5rem solid rgb(234, 234, 234)">
     <div id="stdCarousel" class="carousel slide text-center carousel-dark" data-bs-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">

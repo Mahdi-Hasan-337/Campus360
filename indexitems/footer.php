@@ -1,94 +1,35 @@
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>  
+<section class="footer">
+    <footer class="footer bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 pt-5">
+                    <h5>About Us</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, quibusdam id ducimus ut consequatur ratione dolor et fuga, expedita eaque consequuntur odio tempora suscipit enim magni illum aut placeat. Quos.</p>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 p-5">
+                    <h5 style="text-align:center; margin-bottom: 2rem;">Follow Us</h5>
+                    <ul class="list-inline" style="text-align:center">
+                        <li class="list-inline-item"><a href="https://www.facebook.com"><i class="fab fa-facebook" style="font-size: 2rem"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.twitter.com"><i class="fab fa-twitter" style="font-size: 2rem"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fab fa-instagram" style="font-size: 2rem"></i></a></li>
+                        <!-- <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest" style="font-size: 2rem"></i></a></li> -->
+                    </ul>
+                </div>
 
-    <!-- Passowrd Eye Toggole -->
-    <script>
-      function togglePasswordVisibility(inputId) {
-        const passwordInput = document.getElementById(inputId);
-        const passwordToggleIcon = document.querySelector(`[onclick="togglePasswordVisibility('${inputId}')"]`);
-        if (passwordInput.type === 'password') {
-            passwordInput.type = 'text';
-            passwordToggleIcon.classList.remove('fa-eye-slash');
-            passwordToggleIcon.classList.add('fa-eye');
-        } else {
-            passwordInput.type = 'password';
-            passwordToggleIcon.classList.remove('fa-eye');
-            passwordToggleIcon.classList.add('fa-eye-slash');
-        }
-      }
-    </script>
-
-    <!-- Update Jquery -->
-    <script>
-      $(document).ready(function() {
-        $(".updatebtn").on("click", function() {
-          $("#updateprofilemodal").modal("show");
-
-          var userId = $(this).data("user-id");
-
-          var name = $("#profileModal h2").text();
-          var email = $("#profileModal h5:eq(0)").text();
-          var phone = $("#profileModal h5:eq(1)").text();
-
-          $("#update_id").val(userId);
-          $("#name").val(name);
-          $("#email").val(email);
-          $("#phone").val(phone);
-        });
-      });
-    </script>
-
-    <!-- Image preview -->
-    <script>
-      function previewImage() {
-        const fileInput = document.getElementById('image');
-        const imagePreview = document.getElementById('image-preview');
-
-        const file = fileInput.files[0];
-        const reader = new FileReader();
-
-        reader.onloadend = function () {
-          imagePreview.src = reader.result;
-        };
-
-        if (file) {
-          reader.readAsDataURL(file);
-        } else {
-          imagePreview.src = 'images/campusdotcrew.png';
-        }
-      }
-    </script>
-
-    <!-- Delete Jquery -->
-    <script>
-        $(document).ready(function(){
-            $('.deletebtn').on('click', function() {
-                $('#deletemodal').modal('show');
-            });
-        });
-    </script>
-
-    <!-- Dashboard -->
-    <script>
-        var el = document.getElementById("wrapper");
-        var toggleButton = document.getElementById("menu-toggle");
-
-        toggleButton.onclick = function () {
-            el.classList.toggle("toggled");
-        };
-    </script>
-
-    <!-- Alert container related -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var alertContainer = document.querySelector('.alert-container');
-            if (alertContainer) {
-                alertContainer.classList.add('show');
-                setTimeout(function() {
-                    alertContainer.classList.remove('show');
-                }, 3000);
-            }
-        });
-    </script>
-  </body>
-</html>
+                <div class="col-lg-4 col-md-6 p-5">
+                    <h5>Contact Information</h5>
+                    <ul class="list-unstyled">
+                        <li>Address: Leading University, Kamalbazar, Sylhet, Bangladesh</li>
+                        <li>Phone: (+880) 1517-161066</li>
+                        <li>Email: campusdotcrew@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2023 Campus 360. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</section>
