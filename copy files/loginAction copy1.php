@@ -2,6 +2,8 @@
     session_start();
     include('config.php');
     
+    $loginMessage = "";
+
     if(isset($_POST['login_btn']))
     {
         if(!empty(trim($_POST['l_email'])) && !empty(trim($_POST['l_pass'])))
@@ -26,37 +28,30 @@
                     // active status checking
                     if ($active_status == "1") {
                         $_SESSION['l_email'] = $l_email;
-                        //$_SESSION['status'] = "Successfully Logged in";
-                        //echo "<script>alert('Successfully Logged in')</script>";
-                        header("Location:index.php");
-                        exit(0);
+                         echo "<script>location.href='index.php'</script>";
                     } 
                     else{
-                        $_SESSION['status'] = "Your account is not active. Please contact support.";
-                        //echo "<script>alert('Your account is not active. Please contact support.')</script>";
-                        header("Location:index.php");
-                        exit(0);
+                        $loginMessage = "Your account is not active. Please contact support.";
+                        echo "<script>alert('$loginMessage');</script>";
+                        echo "<script>location.href='index.php'</script>";
                     }
                 } 
                 else{
-                    $_SESSION['status'] = "Invalid email or password";
-                    //echo "<script>alert('Invalid email or password')</script>";
-                    header("Location:index.php");
-                    exit(0);
+                    $loginMessage = "Invalid email or password.";
+                    echo "<script>alert('$loginMessage');</script>";
+                    echo "<script>location.href='index.php'</script>";
                 }
             } 
             else{
-                $_SESSION['status'] = "Invalid email or password";
-                //echo "<script>alert('Invalid email or password')</script>";
-                header("Location:index.php");
-                exit(0);
+                $loginMessage = "Invalid email or password.";
+                echo "<script>alert('$loginMessage');</script>";
+                echo "<script>location.href='index.php'</script>";
             }
         }
         else{
-            $_SESSION['status'] = "All fields are mandatory";
-            //echo "<script>alert('All fields are mandatory')</script>";
-            header("Location:index.php");
-            exit(0);
+            $loginMessage = "All fields are mandatory.";
+            echo "<script>alert('$loginMessage');</script>";
+            echo "<script>location.href='index.php'</script>";
         }
     }
 ?>

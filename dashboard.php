@@ -1,4 +1,5 @@
 <?php include 'indexitems/header.php';?>
+<?php include 'indexitems/nav.php'; ?>
     <style>
         .logo-name{
         font-family: 'Roboto Slab', serif;
@@ -17,7 +18,7 @@
         #sidebar-wrapper {
             min-height: 100vh;
             margin-left: -15rem;
-            transition: margin 0.25s ease-out;
+            transition: all 0.25s ease-out;
         }
         #sidebar-wrapper .sidebar-heading {
             padding: 0.875rem 1.25rem;
@@ -41,7 +42,6 @@
         }
         .list-group-item.active {
             background-color: transparent;
-            color: var(--main-text-color);
             font-weight: bold;
             border: none;
         }
@@ -61,48 +61,51 @@
         }
     </style>
 
-    <div class="d-flex" id="wrapper">
-        <div class="bg-white d-flex flex-column" id="sidebar-wrapper">
-            <div class="sidebar-heading text-center py-4 fs-4 fw-bold text-uppercase border-bottom">
-                <img class="logo" src="images/campusdotcrew.png" alt=""><br>Campus 360
-            </div>
-            <div class="contents" style="display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1;">
-                <div class="list-group list-group-flush my-3">
-                    <a href="#" class="list-group-item list-group-item-action" style="text-transform:uppercase;font-size:1.2rem; font-family:'Poppins',sans-serif; font-weight:bold;">
-                        <i class="fas fa-tachometer-alt me-2"></i>Dashboard
-                    </a>
-
-                    <a href="#" class="list-group-item list-group-item-action" style="text-transform:uppercase;font-size:1.2rem; font-family:'Poppins',sans-serif; font-weight:bold;">
-                        <i class="fas fa-chart-line me-2"></i>Analytics
-                    </a>
-
-                    <a href="#" class="list-group-item list-group-item-action" data-bs-toggle="collapse" data-bs-target="#NotificationMenu" aria-expanded="false" aria-controls="NotificationMenu" style="text-transform:uppercase;font-size:1.2rem; font-family:'Poppins',sans-serif; font-weight:bold;">
-                        <i class="fa-solid fa-bell me-2"></i>Notification
-                    </a>
-                    <div class="collapse" id="NotificationMenu">
-                        <a href="#" class="list-group-item list-group-item-action" style="text-transform:uppercase;font-size:1rem; font-family:'Poppins',sans-serif;">
-                            <i class="fas fa-comment-alt me-2"></i>Vlog Reguest
+    <?php if (isset($_SESSION['l_email']) && $_SESSION['l_email'] === "campusdotcrew@gmail.com") { ?>
+        <div class="d-flex" id="wrapper">
+            <div class="bg-white d-flex flex-column" id="sidebar-wrapper">
+                <!-- <div class="sidebar-heading text-center py-4 fs-4 fw-bold text-uppercase border-bottom">
+                    <img class="logo" src="images/campusdotcrew.png" alt=""><br>Campus 360
+                </div> -->
+                <div class="contents" style="display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1;">
+                    <div class="list-group list-group-flush my-3">
+                        <a href="#" class="list-group-item list-group-item-action" style="text-transform:uppercase;font-size:1.2rem; font-family:'Poppins',sans-serif; font-weight:bold;">
+                            <i class="fas fa-tachometer-alt me-2"></i>Dashboard
                         </a>
-                        <a href="#" class="list-group-item list-group-item-action" style="text-transform:uppercase;font-size:1rem; font-family:'Poppins',sans-serif;">
-                            <i class="fas fa-comment-alt me-2"></i>Enable Request
+
+                        <a href="#" class="list-group-item list-group-item-action" style="text-transform:uppercase;font-size:1.2rem; font-family:'Poppins',sans-serif; font-weight:bold;">
+                            <i class="fas fa-chart-line me-2"></i>Analytics
+                        </a>
+
+                        <a href="#" class="list-group-item list-group-item-action dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#NotificationMenu" aria-expanded="false" aria-controls="NotificationMenu" style="text-transform:uppercase;font-size:1.2rem; font-family:'Poppins',sans-serif; font-weight:bold;">
+                            <i class="fa-solid fa-bell me-2"></i>Notification
+                        </a>
+                        <div class="collapse" id="NotificationMenu" style="padding-left: 1.4rem;">
+                            <a href="#" class="list-group-item list-group-item-action" style="text-transform:uppercase;font-size:1rem; font-family:'Poppins',sans-serif;">
+                                <i class="fas fa-comment-alt me-2"></i>Vlog Reguest
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action" style="text-transform:uppercase;font-size:1rem; font-family:'Poppins',sans-serif;">
+                                <i class="fas fa-comment-alt me-2"></i>Enable Request
+                            </a>
+                        </div>
+
+                        <a href="#" class="list-group-item list-group-item-action" style="text-transform:uppercase;font-size:1.2rem; font-family:'Poppins',sans-serif; font-weight:bold;">
+                            <i class="fas fa-comments me-2"></i>Feedback
                         </a>
                     </div>
-
-                    <a href="#" class="list-group-item list-group-item-action" style="text-transform:uppercase;font-size:1.2rem; font-family:'Poppins',sans-serif; font-weight:bold;">
-                        <i class="fas fa-comments me-2"></i>Feedback
-                    </a>
-                </div>
-                <div class="logout">
-                    <a href="#logoutModal" class="list-group-item list-group-item-action text-danger fw-bold nav-link" data-bs-toggle="modal" role="button" style="text-transform:uppercase;font-size:1.2rem; font-family:'Poppins',sans-serif; font-weight:bold;">
-                        <i class="fas fa-power-off me-2"></i>Logout
-                    </a>
+                    <!-- <div class="logout">
+                        <a href="#logoutModal" class="list-group-item list-group-item-action text-danger fw-bold nav-link" data-bs-toggle="modal" role="button" style="text-transform:uppercase;font-size:1.2rem; font-family:'Poppins',sans-serif; font-weight:bold;">
+                            <i class="fas fa-power-off me-2"></i>Logout
+                        </a>
+                    </div> -->
                 </div>
             </div>
-        </div>
 
-        <!-- Contents for dashboard -->
-        <?php include 'dash_items/dashboard_page.php'; ?>
-    </div>
+            <!-- Contents for dashboard -->
+            <?php include 'dash_items/dashboard_page.php'; ?>
+        </div>
+    <?php } else { ?>
+    <?php } ?>
 
 <?php include 'indexitems/footer.php';?>
 <?php include 'navitems/logoutmodal.php'; ?> 

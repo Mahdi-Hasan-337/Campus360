@@ -6,6 +6,13 @@
         <form action="registerAction.php" method="post">
         <button type="button" class="modal-close-btn" data-bs-dismiss="modal" aria-label="Close">&times</button>
           <h2>Register</h2>
+          <div class="alert">
+            <?php if(isset($_SESSION['status'])) { ?>
+                <div class="alert alert-danger">
+                    <h5><?= $_SESSION['status'] ?></h5>
+                </div>
+            <?php unset($_SESSION['status']); } ?>
+          </div>
           <div class="input-box">
             <input type="text" id="username" placeholder="Enter username" class="form-control" name="r_username" required>
             <i class="fa-solid fa-user email"></i>

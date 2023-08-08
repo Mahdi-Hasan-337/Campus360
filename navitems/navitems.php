@@ -34,7 +34,7 @@
               <a class="li-item nav-link" aria-current="page" href="#">Vlog</a>
             </li>
 
-            <?php if (isset($_SESSION['l_email'])) { ?>
+            <?php if (isset($_SESSION['l_email']) && $_SESSION['l_email'] === "campusdotcrew@gmail.com") { ?>
               <li class="n-item nav-item">
                 <a class="li-item nav-link" aria-current="page" href="dashboard.php">Dashboard</a>
               </li>

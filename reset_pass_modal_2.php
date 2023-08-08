@@ -79,6 +79,14 @@
       echo $_GET['token'];
     } ?>">
 
+  <div class="alert">
+      <?php if(isset($_SESSION['status'])) { ?>
+          <div class="alert alert-danger">
+              <h5><?= $_SESSION['status'] ?></h5>
+          </div>
+      <?php unset($_SESSION['status']); } ?>
+  </div>
+
     <div class="input-box">
       <input type="email" name="email" value="<?php if (isset($_GET['email'])) {
         echo $_GET['email'];

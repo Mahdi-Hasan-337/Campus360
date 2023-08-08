@@ -58,56 +58,54 @@
         $duplicate_email = mysqli_query($conn, "SELECT * FROM `register` WHERE db_email='$r_email'");
 
         if (mysqli_num_rows($duplicate_email) > 0) {
-            $_SESSION['status'] = 'Email Already Taken';
-            //echo '<script>alert("Email Already Taken");</script>';
+            // $_SESSION['status'] = 'Email Already Taken';
+            echo '<script>alert("Email Already Taken");</script>';
             echo "<script>location.href='index.php'</script>";
         }
         elseif (!preg_match($username_pattern, $r_username)) 
         {
-            $_SESSION['status'] = 'Invalid Username. Only space, character, underscore are allowed.';
-            //echo '<script>alert("Invalid Username. Only space, character, underscore are allowed.");</script>';
+            // $_SESSION['status'] = 'Invalid Username. Only space, character, underscore are allowed.';
+            echo '<script>alert("Invalid Username. Only space, character, underscore are allowed.");</script>';
             echo "<script>location.href='index.php'</script>";
         } 
         elseif (!preg_match($email_pattern, $r_email)) 
         {
-            $_SESSION['status'] = 'Invalid Email';
-            //echo '<script>alert("Invalid Email");</script>';
+            // $_SESSION['status'] = 'Invalid Email';
+            echo '<script>alert("Invalid Email");</script>';
             echo "<script>location.href='index.php'</script>";
         } 
         elseif (!preg_match($phone_pattern, $r_phone)) 
         {
-            $_SESSION['status'] = 'Invalid Phone Number. Only BD phone number is allowed.';
-            //echo '<script>alert("Invalid Phone number");</script>';
+            // $_SESSION['status'] = 'Invalid Phone Number. Only BD phone number is allowed.';
+            echo '<script>alert("Invalid Phone number");</script>';
             echo "<script>location.href='index.php'</script>";
         } 
         elseif (!preg_match($pass_pattern, $r_pass)) 
         {
-            $_SESSION['status'] = 'Invalid Password';
-            //echo '<script>alert("Invalid Password");</script>';
+            // $_SESSION['status'] = 'Invalid Password';
+            echo '<script>alert("Invalid Password");</script>';
             echo "<script>location.href='index.php'</script>";
         } elseif ($r_pass != $r_con_pass) {
-            $_SESSION['status'] = 'Password not matched';
-            //echo '<script>alert("Passqord not matched.");</script>';
+            // $_SESSION['status'] = 'Password not matched';
+            echo '<script>alert("Passqord not matched.");</script>';
             echo "<script>location.href='index.php'</script>";
         } 
         else
         {
             $hash_pass = password_hash($r_pass, PASSWORD_DEFAULT);
 
-            $query = "INSERT INTO `register`(`db_username`, `db_phone`, `db_email`, `db_pass`, `verify_token`, `active_status`) VALUES ('$r_username','$r_phone','$r_email','$hash_pass','$verify_token', 1)";
+            $query = "INSERT INTO `register`(`db_username`, `db_phone`, `db_email`, `db_pass`, `verify_token`) VALUES ('$r_username','$r_phone','$r_email','$hash_pass','$verify_token')";
             $query_run = mysqli_query($conn, $query);
-
-            if ($query_run)
+            
+            if($query_run)
             {
                 sendemail_verify("$r_username","$r_email","$verify_token");
-                //$_SESSION['status'] = "Registration Successful..!! Please verify your Email Address";
-                //echo "<script>alert('Registration Successful..!! Please verify your Email Address')</script>";
+                $_SESSION['status'] = "Registration Successful..!! Please verify your Email Address";
+                echo "<script>alert('Registration Successful..!! Please verify your Email Address')</script>";
                 header('Location:index.php');
-            } 
-            else
-            {
+            } else{
                 $_SESSION['status'] = "Registration failed";
-                //echo "<script>alert('Registration failed')</script>";
+                echo "<script>alert('Registration failed')</script>";
                 header('Location:index.php');
             }
         }

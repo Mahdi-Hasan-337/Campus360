@@ -56,34 +56,31 @@
                     <tbody>
                         <?php
                             include 'config.php';
-
+                            
                             $allData = mysqli_query($conn, "SELECT * FROM `register`");
-
-                            while ($row = mysqli_fetch_array($allData)) {
-
-                                // To skip displaying admin
-                                if ($row['db_email'] === 'campusdotcrew@gmail.com') {
-                                    continue;
-                                }
+                            
+                            while($row = mysqli_fetch_array($allData))
+                            {
                                 echo "
                                     <tr>                               
                                         <td>$row[id]</td>
                                         <td>$row[db_username]</td>
                                         <td>$row[db_email]</td>
                                         <td>$row[db_phone]</td>
-                                        <td>
-                                    ";
-                                if ($row['active_status'] == 1) {
-                                    echo "<a class='col-4 btn btn-warning' href='update_status.php?id={$row['id']}'>Disable</a>";
-                                } else if ($row['active_status'] == 0) {
-                                    echo "<a class='col-4 btn btn-danger' href='update_status.php?id={$row['id']}'>Enable</a>";
-                                }
-                                echo "
-                                        </td>
-                                    </tr>
-                                ";
+                                        <td>";
+
+                                        if ($row['db_email'] == 'campusdotcrew@gmail.com') {
+                                            echo "<button class='col-4 btn btn-secondary' disabled>Admin</button>";
+                                        } else {
+                                            if ($row['active_status'] == 1) {
+                                                echo "<a class='col-4 btn btn-warning' href='update_status.php?id={$row['id']}'>Disable</a>";
+                                            } else if ($row['active_status'] == 0) {
+                                                echo "<a class='col-4 btn btn-danger' href='update_status.php?id={$row['id']}'>Enable</a>";
+                                            }
+                                        }                                        
+                                echo "</td></tr>";
                             }
-                            ?>
+                        ?>
                     </tbody>
                 </table>
             </div>
