@@ -23,12 +23,10 @@
         <a href="profileModal" data-bs-toggle="modal" data-bs-target="#profileModal" style="text-decoration:none;color:black;">
           <div class="container-content" style="margin-bottom: 20px;">
             <div class="profile d-flex">
-              <div class="col-9 d-flex icon-txt" style="margin-right: 1rem;">
-                <i class="col-3 fa-solid fa-user rounded-circle" style="background:rgb(243, 238, 238); padding: 0.5rem; font-size: 1.2rem;"></i> 
-                <pre> </pre>
-                <span class="col-8 p-txt" style="font-size:1.2rem;font-weight: 700;">Profile</span>
+              <div class="d-flex icon-txt" style="margin-right: 1rem;">
+                <i class="fa-solid fa-user rounded-circle" style="background:rgb(243, 238, 238); padding: 0.5rem; font-size: 1.2rem;"></i> <pre> </pre><span class="p-txt" style="font-size:1.2rem;font-weight: 700;">Profile</span>
               </div>
-              <div class="col-1 arrow"><span style="font-size:1.25rem;margin-right:0.25rem;">></span></div>
+              <div class="arrow"><span style="font-size:1.25rem;margin-right:0.25rem;">></span></div>
             </div>
           </div>
         </a>
@@ -38,12 +36,10 @@
         <a href="logoutModal" data-bs-toggle="modal" data-bs-target="#logoutModal" style="text-decoration:none;color:black;">
           <div class="container-content" style="margin-bottom: 20px;">
             <div class="profile d-flex">
-              <div class="col-9 d-flex icon-txt" style="margin-right: 1rem;">
-                <i class="col-3 p-icon fa-solid fa-arrow-right-from-bracket rounded-circle" style="background:rgb(243, 238, 238); padding: 0.5rem; font-size: 1.2rem;"></i>
-                <pre> </pre>
-                <span class="col-8 p-txt" style="font-size:1.2rem;font-weight: 700;">Logout</span>
+              <div class="d-flex icon-txt" style="margin-right: 1rem;">
+                <i class="p-icon fa-solid fa-arrow-right-from-bracket rounded-circle" style="background:rgb(243, 238, 238); padding: 0.5rem; font-size: 1.2rem;"></i> <pre> </pre><span class="p-txt" style="font-size:1.2rem;font-weight: 700;">Logout</span>
               </div>
-              <div class="col-1 arrow"><span style="font-size:1.25rem;margin-right:0.25rem;">></span></div>
+              <div class="arrow"><span style="font-size:1.25rem;margin-right:0.25rem;">></span></div>
             </div>
           </div>
         </a>

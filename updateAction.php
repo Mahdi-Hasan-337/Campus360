@@ -1,40 +1,53 @@
 <?php
-    if (isset($_POST["updatedata"])) {
-        include 'config.php';
+session_start(); // Start the session
+include 'config.php';
 
-        $id = $_POST['update_id'];
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $phone = $_POST['phone'];
+if (isset($_POST["updatedata"])) {
+    $id = $_POST['update_id'];
+    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $phone = mysqli_real_escape_string($conn, $_POST['phone']);
 
-        // file type controlling
-        $fileType = strtolower(pathinfo($img_des, PATHINFO_EXTENSION));
-        if (!preg_match("/(jpg|jpeg|png|webp|gif)$/i", $fileType)) {
-            echo "<script>alert('Invalid file type. Only JPG, JPEG, PNG, WebP, and GIF files are allowed.')</script>";
-            exit();
-        }
+    $facebook = mysqli_real_escape_string($conn, $_POST['facebook']);
+    $telegram = mysqli_real_escape_string($conn, $_POST['telegram']);
+    $github = mysqli_real_escape_string($conn, $_POST['github']);
 
-        if (isset($_FILES['image']) && $_FILES['image']['size'] > 0) {
-            $image = $_FILES['image'];
-            $imageLocation = $_FILES['image']['tmp_name'];
-            $imageName = $_FILES['image']['name'];
-            $img_des = "uploads/" . $imageName;
+    // Handle image upload if provided
+    if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
+        $image = $_FILES['image'];
+        $imageLocation = $_FILES['image']['tmp_name'];
+        $imageName = mysqli_real_escape_string($conn, $_FILES['image']['name']);
+        $img_des = "uploads/" . $imageName;
 
-            if (move_uploaded_file($imageLocation, $img_des)) {
-                $updateQuery = "UPDATE `register` SET `db_username`='$name', `db_email`='$email', `db_phone`='$phone', `db_image`='$imageName' WHERE `id`='$id'";
-            } else {
-                echo "<script>alert('Error uploading image.')</script>";
-                exit();
-            }
+        if (move_uploaded_file($imageLocation, $img_des)) {
+            $updateQuery = "UPDATE `register` SET 
+                            `db_username`='$name', 
+                            `db_email`='$email', 
+                            `db_phone`='$phone', 
+                            `fb`='$facebook', 
+                            `telegram`='$telegram', 
+                            `github`='$github', 
+                            `db_image`='$imageName' WHERE `id`='$id'";
         } else {
-            $updateQuery = "UPDATE `register` SET `db_username`='$name', `db_email`='$email', `db_phone`='$phone' WHERE `id`='$id'";
-        }
-
-        if (mysqli_query($conn, $updateQuery)) {
+            $_SESSION['status'] = "Error uploading image.";
             header("Location: index.php");
             exit();
-        } else {
-            echo "<script>alert('Error updating profile.')</script>";
         }
+    } else {
+        $updateQuery = "UPDATE `register` SET 
+                        `db_username`='$name', 
+                        `db_email`='$email', 
+                        `db_phone`='$phone', 
+                        `fb`='$facebook', 
+                        `telegram`='$telegram', 
+                        `github`='$github' WHERE `id`='$id'";
     }
+
+    if (mysqli_query($conn, $updateQuery)) {
+        header("Location: index.php");
+        exit();
+    } else {
+        $_SESSION['status'] = "Error uploading profile.";
+    }
+}
 ?>

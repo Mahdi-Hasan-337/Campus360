@@ -22,17 +22,59 @@
             echo "
               <div class='text-center mt-5'>
                 <img src='$image_path' alt='Avatar' class='img-fluid rounded-circle' style='width:4rem; height:4rem;'>
-                <h2>$row[db_username]</h2>
+                <h2 style='text-transform:uppercase'>$row[db_username]</h2>
                 <h5>$row[db_email]</h5>
                 <h5>$row[db_phone]</h5>
-                <button type='button' class='col-12 btn btn-primary mt-3 p-2 updatebtn' data-user-id='$row[id]' data-bs-dismiss='modal' style='margin-right:1rem;'><i class='fa-solid fa-pen-to-square'></i> Update Profile</button>
-                <button type='button' class='col-12 btn btn-danger mt-3 p-2 deletebtn' data-user-id='$row[id]' data-bs-dismiss='modal' style='margin-right:1rem;'><i class='fa-solid fa-trash-can-xmark'></i> Delete your account</button>
+                <div class='d-flex' style='align-items:center; justify-content:center;'>";
+
+                $fb = $row['fb'];
+                $telegram = $row['telegram'];
+                $github = $row['github'];
+
+                if (filter_var($fb, FILTER_VALIDATE_URL)) {
+                    echo "<a href='$fb' target='_blank'><i class='social-icon fab fa-facebook-f m-3' title='Facebook'></i></a>";
+                } else {
+                    echo "<i class='social-icon fab fa-facebook-f m-3'></i>";
+                }
+
+                if (filter_var($telegram, FILTER_VALIDATE_URL)) {
+                    echo "<a href='$telegram' target='_blank'><i class='social-icon fab fa-telegram m-3' title='Telegram'></i></a>";
+                } else {
+                    echo "<i class='social-icon fab fa-telegram m-3'></i>";
+                }
+
+                if (filter_var($github, FILTER_VALIDATE_URL)) {
+                    echo "<a href='$github' target='_blank'><i class='social-icon fa-brands fa-github m-3' title='Github'></i></a>";
+                } else {
+                    echo "<i class='social-icon fa-brands fa-github m-3'></i>";
+                }
+                
+            echo "
+                </div>
+                <button type='button' class='col-12 btn btn-primary mt-3 p-2 updatebtn' data-user-id='$row[id]' data-bs-dismiss='modal' style='margin-right:1rem;'><i class='fa-solid fa-pen-to-square'></i>  UPDATE PROFILE</button>
+                <button type='button' class='col-12 btn btn-danger mt-3 p-2 deletebtn' data-user-id='$row[id]' data-bs-dismiss='modal' style='margin-right:1rem;'><i class='fa-solid fa-trash'></i>  DELETE YOUR ACCOUNT</button>
               </div>
             ";
           }
         ?>
-        <button type="button" class="col-12 btn btn-secondary mt-3 p-2" data-bs-dismiss="modal">Close</button>
+        <!-- <button type="button" class="col-12 btn btn-secondary mt-3 p-2" data-bs-dismiss="modal">Close</button> -->
       </div>
     </div>
   </div>
 </div>
+
+<style>
+ .social-icon{
+  display:flex; 
+  align-items:center; 
+  Justify-content:center; 
+  background:rgb(243, 238, 238); 
+  height:3rem; 
+  width:3rem; 
+  padding: 0.5rem; 
+  font-size: 1.2rem; 
+  border-radius:50%;
+  color: black;
+  cursor: pointer;
+ }
+</style>
