@@ -1,5 +1,6 @@
-<?php include 'indexitems/header.php';?>
-<?php include 'indexitems/nav.php'; ?>
+<?php //include 'includes/indexitems/header_code.php';?>
+<?php include 'includes/indexitems/header_code.php';?>
+<?php include 'includes/indexitems/nav.php'; ?>
     <style>
         .logo-name{
         font-family: 'Roboto Slab', serif;
@@ -102,10 +103,10 @@
             </div>
 
             <!-- Contents for dashboard -->
-            <?php include 'dash_items/dashboard_page.php'; ?>
+            <?php include 'includes/dash_items/dashboard_page.php'; ?>
         </div>
     <?php } else { ?>
     <?php } ?>
 
-<?php include 'indexitems/footer.php';?>
-<?php include 'navitems/logoutmodal.php'; ?> 
+<?php include 'includes/indexitems/nav.php'; ?>
+<?php include 'includes/navitems/logoutmodal.php'; ?> 
