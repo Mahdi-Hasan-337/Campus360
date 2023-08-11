@@ -5,7 +5,7 @@
       <div class="modal-body">
         <button type="button" class="modal-close-btn" data-bs-dismiss="modal" aria-label="Close">&times</button>
         <?php
-          include '../../config.php';
+          include 'config.php';
           $email = $_SESSION['l_email'];
           $allData = mysqli_query($conn, "SELECT * FROM `register` WHERE db_email='$email'");
 
@@ -22,7 +22,7 @@
             echo "
               <div class='text-center mt-5'>
                 <img src='$image_path' alt='Avatar' class='img-fluid rounded-circle' style='width:4rem; height:4rem;'>
-                <h4 style='text-transform:uppercase'>$row[db_username]</h4>
+                <h4 class='mt-3' style='text-transform:uppercase'>$row[db_username]</h4>
                 <h5>$row[db_email]</h5>
                 <h5>$row[db_phone]</h5>
                 <div class='d-flex' style='align-items:center; justify-content:center;'>";

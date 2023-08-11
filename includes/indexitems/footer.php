@@ -1,6 +1,6 @@
 <!-- <section class="footer"> -->
 <!-- Footer Section Start -->
-    <footer >
+<footer >
         <div class="footer-widgets-area border">
             <div class="container container-1360">
             <div class="row">

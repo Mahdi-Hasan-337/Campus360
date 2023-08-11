@@ -21,7 +21,7 @@
     <title>Campus Dot Crew</title>
     <?php
     $cssFile = isset($_SESSION['l_email']) ? 'after_login_styles.css' : 'before_login_styles.css';
-    echo '<link rel="stylesheet" type="text/css" href="assets/css/' . $cssFile . '">';
+    echo '<link rel="stylesheet" type="text/css" href="assets/css/nav/' . $cssFile . '">';
     ?>
   </head>
   <body>

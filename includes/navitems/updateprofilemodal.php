@@ -18,8 +18,9 @@
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <form action="includes/action/updateAction.php" method="POST" enctype="multipart/form-data">
-        <div class="mb-4">
-            <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="mb-4" style="display:flex;justify-content:space-between">
+          <a class="signup-txt" data-bs-target="#profileModal" data-bs-toggle="modal" data-bs-dismiss="modal" style="cursor:pointer; text-decoration:none;color:black;"><span style="font-size:1.5rem;"><</span></a>
+          <button type="button" class="modal-close-btn float-end" data-bs-dismiss="modal" aria-label="Close">&times</button>
         </div>
         <h2 class="modal-title text-center mb-2" id="updatemodalLabel">Update Profile</h2>            
 
@@ -98,9 +99,7 @@
             </div>
           </div>
         </div>
-
         <button type="submit" name="updatedata" class="col-12 btn btn-primary mb-3 p-2"><i class='fa-solid fa-pen-to-square'></i>  UPDATE</button>
-        <!-- <button type="button" class="col-12 btn btn-secondary p-2" data-bs-dismiss="modal">Close</button> -->
         </div>
       </form>
     </div>

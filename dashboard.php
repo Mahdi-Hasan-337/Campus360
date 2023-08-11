@@ -1,4 +1,3 @@
-<?php //include 'includes/indexitems/header_code.php';?>
 <?php include 'includes/indexitems/header_code.php';?>
 <?php include 'includes/indexitems/nav.php'; ?>
     <style>

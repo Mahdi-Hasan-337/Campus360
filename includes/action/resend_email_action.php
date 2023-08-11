@@ -21,7 +21,6 @@
         $mail->SMTPSecure = "tls";
         $mail->Port       = 587;
 
-        //Recipients
         $mail->setFrom('campusdotcrew@gmail.com', $name);
         $mail->addAddress($email);
         
@@ -56,33 +55,28 @@
                     $verify_token = $row['verify_token'];
                     resend_email_verify($name, $email, $verify_token);
                     $_SESSION['status'] = "Email verification Link has been sent to your email";
-                    //echo "<script>alert('Verification Email Link has been sent to your email')</script>";
-                    
                     header('Location:../../index.php');
-                    exit(0);
+                    exit();
                 }
                 else
                 {
                     $_SESSION['status'] = "Email already verified. Please login now";
-                    //echo "<script>alert('Email already verified. Please login now')</script>";
                     header('Location:../../index.php');
-                    exit(0);
+                    exit();
                 }
             }
             else
             {
                 $_SESSION['status'] = "Email is not registered. Please register now";
-                //echo "<script>alert('Email is not registered. Please register now')</script>";
                 header('Location:../../index.php');
-                exit(0);
+                exit();
             }
         }
         else
         {
-            //$_SESSION['status'] = "Please enter the email field";
-            echo "<script>alert('Please enter the email field')</script>";
+            $_SESSION['status'] = "Please enter the email field";
             header('Location:../../index.php');
-            exit(0);
+            exit();
         }
     }
 

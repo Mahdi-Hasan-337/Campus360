@@ -26,34 +26,29 @@
                     if ($active_status == "1") {
                         $_SESSION['l_email'] = $l_email;
                         //$_SESSION['status'] = "Successfully Logged in";
-                        //echo "<script>alert('Successfully Logged in')</script>";
                         header("Location: ../../index.php");
                         exit();
                     } 
                     else{
                         $_SESSION['status'] = "Your account is not active. Please contact support.";
-                        //echo "<script>alert('Your account is not active. Please contact support.')</script>";
                         header("Location: ../../index.php");
                         exit();
                     }
                 } 
                 else{
                     $_SESSION['status'] = "Invalid email or password";
-                    //echo "<script>alert('Invalid email or password')</script>";
                     header("Location: ../../index.php");
                     exit();
                 }
             } 
             else{
                 $_SESSION['status'] = "Invalid email or password";
-                //echo "<script>alert('Invalid email or password')</script>";
                 header("Location: ../../index.php");
                 exit();
             }
         }
         else{
             $_SESSION['status'] = "All fields are mandatory";
-            //echo "<script>alert('All fields are mandatory')</script>";
             header("Location: ../../index.php");
             exit();
         }

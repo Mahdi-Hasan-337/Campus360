@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 09, 2023 at 09:22 AM
+-- Generation Time: Aug 01, 2023 at 05:45 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -56,10 +56,6 @@ CREATE TABLE `register` (
   `db_image` varchar(255) NOT NULL,
   `verify_token` varchar(255) NOT NULL,
   `verify_status` tinyint(2) NOT NULL,
-  `active_status` tinyint(2) NOT NULL,
-  `fb` varchar(255) NOT NULL,
-  `telegram` varchar(255) NOT NULL,
-  `github` varchar(255) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -67,9 +63,9 @@ CREATE TABLE `register` (
 -- Dumping data for table `register`
 --
 
-INSERT INTO `register` (`id`, `db_username`, `db_email`, `db_phone`, `db_pass`, `db_image`, `verify_token`, `verify_status`, `active_status`, `fb`, `telegram`, `github`, `created_at`) VALUES
-(35, 'Campus Dot Crew', 'campusdotcrew@gmail.com', '01517161066', '$2y$10$yPlHAACEVHRZw7t9NILFMuu4IouDPe5fgu67ucl9.8ddWKux2HvVW', '', 'c4834142d30f29c1bd8cfa1dcae9c870', 1, 1, '', '', '', '2023-08-08 12:53:05'),
-(36, 'Mahdi Hasan', 'cse_2012020337@lus.ac.bd', '01517161066', '$2y$10$ipq5VpFxrOxK61LKrI5XtOqjOd26gKid6vPVEHaN/1pZtWmg6iEDi', 'P P  14603.jpg', 'fd5775b9afe4d736e99400297cfc169a', 1, 1, 'https://www.facebook.com/mahdi.mahdihasan.524', '', '', '2023-08-09 07:22:27');
+INSERT INTO `register` (`id`, `db_username`, `db_email`, `db_phone`, `db_pass`, `db_image`, `verify_token`, `verify_status`, `created_at`) VALUES
+(31, 'mahdi', 'mahdi.sakib.mahfuz@gmail.com', '01517161077', '$2y$10$k215zo/vqviRYYglt.wzpuKCirTaPUTyRWFA8HRBO4dRH66mkxsLW', '', '22ff265b21bebe0d3bd06dc6e02b5b6f', 1, '2023-08-01 08:58:32'),
+(32, 'mahdi', 'cse_2012020337@lus.ac.bd', '01517161066', '$2y$10$dU5fO06VR9dgpezoF2jlz.7AUdkfUafTFjhdfJDtKa3baBa790IEa', '', '740d5b79607dc334f5b6c9ce834e4c48campus360', 1, '2023-08-01 15:39:38');
 
 --
 -- Indexes for dumped tables
@@ -101,7 +97,7 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT for table `register`
 --
 ALTER TABLE `register`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
