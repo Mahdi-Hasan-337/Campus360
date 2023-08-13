@@ -5,7 +5,7 @@
     if(isset($_GET['token']))
     {
         $token = $_GET['token'];
-        $verify_query = "SELECT verify_token,verify_status FROM register WHERE verify_token='$token' LIMIT 1";
+        $verify_query = "SELECT verify_token, verify_status FROM register WHERE verify_token='$token' LIMIT 1";
         $verify_query_run = mysqli_query($conn, $verify_query);
 
         if(mysqli_num_rows($verify_query_run) > 0){
@@ -18,7 +18,7 @@
 
                 if($update_query_run)
                 {
-                    //$_SESSION['status'] = "Your acccount has been verified successfully";
+                    $_SESSION['p_status'] = "Your acccount has been verified successfully";
                     header('Location:../../index.php');
                     exit(0);
                 } 
@@ -47,5 +47,4 @@
         $_SESSION['status'] = "Not Allowed";
         header('Location:../../index.php');
     }
-
 ?>

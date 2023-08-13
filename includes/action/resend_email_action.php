@@ -8,7 +8,7 @@
 
     require '../../vendor/autoload.php';
 
-    function resend_email_verify($name, $email, $verify_token)
+    function resend_email($name, $email, $token)
     {
         $mail = new PHPMailer(true);
         $mail->isSMTP(); 
@@ -27,13 +27,13 @@
         $mail->isHTML(true);
         $mail->Subject = 'Resend Email Verification from Campus Dot Crew';
         
-        $email_template = "
+        $mail_template = "
             <h2>You have registered with campus Dot Crew</h2>
             <h5>Verify your email address to login with the given link</h5>
             <br>
-            <a href='http://localhost:8080/53G/Campus360/includes/action/verify_email_Action.php?token=$verify_token'>Click Me</a>
+            <a href='http://localhost:8080/53G/Campus360/includes/action/verify_email_Action.php?token=$token'>Click Me</a>
         ";
-        $mail->Body = $email_template;
+        $mail->Body = $mail_template;
         $mail->send();
     }
 
@@ -52,15 +52,15 @@
                 {
                     $name = $row['db_username'];
                     $email = $row['db_email'];
-                    $verify_token = $row['verify_token'];
-                    resend_email_verify($name, $email, $verify_token);
-                    $_SESSION['status'] = "Email verification Link has been sent to your email";
+                    $token = $row['verify_token'];
+                    resend_email($name, $email, $token);
+                    $_SESSION['p_status'] = "Email verification Link has been sent to your email";
                     header('Location:../../index.php');
                     exit();
                 }
                 else
                 {
-                    $_SESSION['status'] = "Email already verified. Please login now";
+                    $_SESSION['p_status'] = "Email already verified. Please login now";
                     header('Location:../../index.php');
                     exit();
                 }

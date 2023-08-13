@@ -57,7 +57,6 @@
             ";
           }
         ?>
-        <!-- <button type="button" class="col-12 btn btn-secondary mt-3 p-2" data-bs-dismiss="modal">Close</button> -->
       </div>
     </div>
   </div>

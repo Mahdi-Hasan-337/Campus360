@@ -12,7 +12,7 @@ if (isset($_POST["updatedata"])) {
     $telegram = mysqli_real_escape_string($conn, $_POST['telegram']);
     $github = mysqli_real_escape_string($conn, $_POST['github']);
 
-    if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
+    if (isset($_FILES['image'])) {
         $image = $_FILES['image'];
         $imageName = mysqli_real_escape_string($conn, $_FILES['image']['name']);
         $img_des = "../../assets/uploads/" . $imageName;
@@ -30,7 +30,7 @@ if (isset($_POST["updatedata"])) {
     }
 
     if (mysqli_query($conn, $updateQuery)) {
-        // $_SESSION['status'] = "Profile updated successfully.";
+        $_SESSION['p_status'] = "Profile updated successfully.";
         header("Location: ../../index.php");
         exit();
     } else {

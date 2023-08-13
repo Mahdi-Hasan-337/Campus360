@@ -95,7 +95,7 @@
 
   <form action="../action/reset_pass_action.php" method="POST">
     <h2>Reset Password</h2>
-    <input class="col-12" type="text" name="password_token" value="<?php if (isset($_GET['token'])) {echo $_GET['token']; } ?>" readonly>
+    <input class="col-12" type="hidden" name="password_token" value="<?php if (isset($_GET['token'])) {echo $_GET['token']; } ?>" readonly>
 
     <?php if(isset($_SESSION['status'])) { ?>
       <div class="alert-container">

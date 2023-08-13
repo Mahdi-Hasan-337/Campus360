@@ -18,10 +18,11 @@
                 $deleteQuery = "DELETE FROM `register` WHERE `db_email`='$email'";
                 if (mysqli_query($conn, $deleteQuery)) {
                     session_destroy();
+                    $_SESSION['p_status'] = "Successfully Deleted";
                     header("Location: ../../index.php");
                     exit();
                 } else {
-                    $_SESSION['status'] = "Error deleting account: " . mysqli_error($conn);
+                    $_SESSION['status'] = "Error deleting account: ";
                     //echo "<script>alert('Error deleting account')</script>";
                     header("Location: ../../index.php");
                     exit();

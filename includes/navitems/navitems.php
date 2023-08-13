@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
   <div class="container-fluid">
     <img class="logo" src="assets/images/campusdotcrew.png" alt="">
     <a class="navbar-brand logo-name" href="index.php">Campus 360</a>
@@ -46,9 +46,9 @@
             </li>
           </ul>
         </div>
-      </div>
-      <div class="element3 d-flex" style="align-items: center;">
-        <?php include('./includes/navitems/element3.php');?>
+        <div class="element3" style="align-items: center;">
+          <?php include('./includes/navitems/element3.php');?>
+        </div>
       </div>
     </div>
   </div>

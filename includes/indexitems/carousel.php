@@ -33,7 +33,7 @@
             </div>
         </div>
 
-        <!-- Controls -->
+        <!-- Control Buttons : Previous & Next -->
         <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev" style="color:black">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>

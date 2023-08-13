@@ -15,6 +15,6 @@
         header("Location: ../../dashboard.php");
         exit();
     } else {
-        echo "<script>alert('Something went wrong');</script>";
+        $_SESSION['status'] = "Something went Wrong";
     }
 ?>

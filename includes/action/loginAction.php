@@ -25,7 +25,7 @@
                     // active status checking
                     if ($active_status == "1") {
                         $_SESSION['l_email'] = $l_email;
-                        //$_SESSION['status'] = "Successfully Logged in";
+                        $_SESSION['p_status'] = "Successfully Logged in";
                         header("Location: ../../index.php");
                         exit();
                     } 

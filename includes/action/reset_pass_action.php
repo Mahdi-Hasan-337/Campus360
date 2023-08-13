@@ -9,7 +9,7 @@
     require '../../vendor/autoload.php';
 
     /// Function for reset password link to email
-    function send_password_reset($get_name, $get_email, $token)
+    function reset_password($name, $email, $token)
     {
         $mail = new PHPMailer(true);
         $mail->isSMTP(); 
@@ -23,19 +23,19 @@
         $mail->Port       = 587;
 
         //Recipients
-        $mail->setFrom('campusdotcrew@gmail.com', $get_name);
-        $mail->addAddress($get_email);
+        $mail->setFrom('campusdotcrew@gmail.com', $name);
+        $mail->addAddress($email);
         
         $mail->isHTML(true);
         $mail->Subject = 'Reset password link';
         
-        $email_template = "
+        $mail_template = "
             <h2>Hello</h2>
             <h5>You are receiving this mail from Campus Dot Crew as you are requested to reset password</h5>
             <br>
-            <a href='http://localhost:8080/53G/Campus360/includes/navitems/reset_pass_modal_2.php?token=$token&email=$get_email'>Click Me</a>
+            <a href='http://localhost:8080/53G/Campus360/includes/navitems/reset_pass_modal_2.php?token=$token&email=$email'>Click Me</a>
         ";
-        $mail->Body = $email_template;
+        $mail->Body = $mail_template;
         $mail->send();
     }
 
@@ -50,16 +50,16 @@
 
         if (mysqli_num_rows($check_email_run) > 0) {
             $row = mysqli_fetch_array($check_email_run);
-            $get_name = $row['db_username'];
-            $get_email = $row['db_email'];
+            $name = $row['db_username'];
+            $email = $row['db_email'];
     
             $update_token = "UPDATE register SET verify_token='$token' WHERE db_email='$email' LIMIT 1";
             $update_token_run = mysqli_query($conn, $update_token);
     
             if ($update_token_run) {
                 /// Call the function
-                send_password_reset($get_name, $get_email, $token);
-                $_SESSION['status'] = "Password reset link has been sent to your email";
+                reset_password($name, $email, $token);
+                $_SESSION['p_status'] = "Password reset link has been sent to your email";
                 header('Location:../../index.php');
                 exit(0);
             } else {
@@ -72,9 +72,7 @@
             header('Location:../../index.php');
             exit(0);
         }
-    } else {
-        
-    }
+    } else {}
 
     /// ../navitems/reset_pass_modal_2.php
     if (isset($_POST['uppass_btn'])) {

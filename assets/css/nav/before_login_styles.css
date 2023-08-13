@@ -111,6 +111,17 @@
     justify-content: center;
   }
 
+  /* alert*/
+  .alert-container {
+    position: relative;
+    display: none;
+  }
+
+  .alert-container.show {
+      display: block;
+      /* margin-bottom: 1.25rem; */
+  }
+  
   /* Hide the alert after 20s */
   .auto-hide {
     animation: hideAlert 20s forwards;
@@ -121,17 +132,6 @@
         opacity: 0;
         display: none;
     }
-  }
-
-  /* Free up space after sollapse the alert*/
-  .alert-container {
-      position: relative;
-      display: none;
-  }
-
-  .alert-container.show {
-      display: block;
-      margin-bottom: 20px;
   }
 
   /* Responsive Design */
@@ -172,6 +172,12 @@
       left: 50%;
       transform: translateX(-50%);
     }
+    .reverse{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }  
   }
 
   /* ==================== Login Modal & Register Modal ====================*/
