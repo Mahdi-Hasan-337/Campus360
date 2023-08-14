@@ -10,7 +10,7 @@
           <div class="input-box">
             <input type="password" placeholder="Enter Password" id="dlt_pass" class="form-control" name="dlt_pass" required>
             <i class="fa-solid fa-lock password"></i>
-            <i class="toggle-password fa-solid fa-eye-slash pwd_hide" onclick="togglePasswordVisibility('dlt_pass')" style="color:#707070; font-size: 0.9rem;"></i>
+            <i class="toggle-password fa-solid fa-eye-slash pwd_hide" onclick="passowrdToggole('dlt_pass')" style="color:#707070; font-size: 0.9rem;"></i>
           </div>
           <p class="text-danger mt-3"><i class="fa-solid fa-triangle-exclamation"></i> By clicking 'Submit' your account will be deleted permanently and cannot be restored.</p>
           <button class="button" name="passtodlt_btn">Submit</button>

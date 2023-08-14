@@ -21,12 +21,12 @@
           <div class="input-box">
             <input type="password" placeholder="Enter Password" id="r_password" class="form-control" name="r_pass" required>
             <i class="fa-solid fa-lock password"></i>
-            <i class="toggle-password fa-solid fa-eye-slash pwd_hide" onclick="togglePasswordVisibility('r_password')" style="color:#707070; font-size: 0.9rem;"></i>
+            <i class="toggle-password fa-solid fa-eye-slash pwd_hide" onclick="passowrdToggole('r_password')" style="color:#707070; font-size: 0.9rem;"></i>
           </div>
           <div class="input-box">
               <input type="password" placeholder="Re-type Password" id="con_password" class="form-control" name="r_con_pass" required>
               <i class="fa-solid fa-lock password"></i>
-              <i class="toggle-password fa-solid fa-eye-slash pwd_hide" onclick="togglePasswordVisibility('con_password')" style="color:#707070; font-size: 0.9rem;"></i>
+              <i class="toggle-password fa-solid fa-eye-slash pwd_hide" onclick="passowrdToggole('con_password')" style="color:#707070; font-size: 0.9rem;"></i>
           </div>
           <button class="button" name="register_btn">Register</button>
           <div class="login-signup">

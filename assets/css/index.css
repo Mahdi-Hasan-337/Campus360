@@ -1,0 +1,125 @@
+    /* Footer Section Start */
+    .footer-widgets-area {
+        padding: 120px 0 70px;
+    }
+
+    .widget {
+        margin-bottom: 50px;
+    }
+
+    .widget-title {
+        font-size: 22px;
+        font-weight: 800;
+        margin-bottom: 40px;
+        line-height: 1.4;
+    }
+
+    .widget.address-widget p {
+        margin-bottom: 20px;
+    }
+
+    .widget.nav-widget li {
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    .widget.nav-widget li:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    .widget.nav-widget li a:hover {
+        padding-left: 8px;
+    }
+
+    .widget.newsletter-widget {
+        text-align: center;
+    }
+
+    .widget.newsletter-widget p {
+        font-family: "Roboto Slab", serif;
+        font-weight: 500;
+        font-size: 16px;
+        padding-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .widget.newsletter-widget form {
+        position: relative;
+    }
+
+    .footer-copyright-area {
+        padding: 50px 0;
+        border-top: 1px solid #e5e5e5;
+        position: relative;
+        z-index: 1;
+    }
+
+    .footer-copyright-area::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, 0);
+        width: 1px;
+        height: 100%;
+        background: #e5e5e5;
+        z-index: -1;
+    }
+
+    .social-links ul {
+        display: flex;
+        font-size: 14px;
+        flex-wrap: wrap;
+        list-style-type: none;
+    }
+
+    .social-links ul li {
+        margin-right: 10px;
+    }
+
+    .social-links ul li.title {
+        margin-right: 20px;
+        color: #000;
+        font-weight: 600;
+    }
+
+    .social-links ul li:last-child {
+        margin-right: 0;
+    }
+
+    .social-links ul a {
+        color: #3d3d3d;
+    }
+
+    .social-links ul a:hover {
+        color: #3d3d3d;
+        font-weight: bold;
+    }
+
+    .footer-copyright-area .copyright-text {
+        font-size: 14px;
+    }
+
+    .item{
+        text-decoration:none;
+        color:black;
+    }
+
+    /* Responsive */
+    @media screen and (max-width: 600px) {
+        .blog-card {
+        border-radius: 5px;
+        margin: 0px 0px;
+        }
+        .card-banner {
+        height: 300px;
+        border-radius: 5px;
+        overflow: hidden;
+        }
+        .card-title {
+        font-size: 15px;
+        }
+        .card-text {
+        font-size: 12px;
+        }
+    }

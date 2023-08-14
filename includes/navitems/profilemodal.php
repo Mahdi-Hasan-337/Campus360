@@ -61,19 +61,3 @@
     </div>
   </div>
 </div>
-
-<style>
- .social-icon{
-  display:flex; 
-  align-items:center; 
-  Justify-content:center; 
-  background:rgb(243, 238, 238); 
-  height:3rem; 
-  width:3rem; 
-  padding: 0.5rem; 
-  font-size: 1.2rem; 
-  border-radius:50%;
-  color: black;
-  cursor: pointer;
- }
-</style>

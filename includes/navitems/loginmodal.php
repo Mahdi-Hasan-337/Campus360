@@ -13,7 +13,7 @@
           <div class="input-box">
             <input type="password" placeholder="Enter Password" id="password" class="form-control" name="l_pass" required>
             <i class="fa-solid fa-lock password"></i>
-            <i class="toggle-password fa-solid fa-eye-slash pwd_hide" onclick="togglePasswordVisibility('password')" style="color:#707070; font-size: 0.9rem;"></i>
+            <i class="toggle-password fa-solid fa-eye-slash pwd_hide" onclick="passowrdToggole('password')" style="color:#707070; font-size: 0.9rem;"></i>
           </div>
           <div class="option-field">
             <span class="checkbox">
