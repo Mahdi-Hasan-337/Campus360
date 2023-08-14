@@ -10,11 +10,11 @@
         <div class="element2">
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="n-item nav-item text-center">
-              <a class="li-item nav-link active home" aria-current="page" href="index.php">Home</a>
+              <a class="li-item nav-link" aria-current="page" href="index.php">Home</a>
             </li>
 
             <li class="n-item nav-item text-center">
-              <a class="li-item nav-link active home" aria-current="page" href="navitems/Course Website/CoursePage.php">Courses</a>
+              <a class="li-item nav-link" aria-current="page" href="course.php">Courses</a>
             </li>
 
             <li class="n-item nav-item">
@@ -22,7 +22,7 @@
             </li>
 
             <li class="n-item nav-item">
-              <a class="li-item nav-link" aria-current="page" href="#">Vlog</a>
+              <a class="li-item nav-link" aria-current="page" href="#">Blog</a>
             </li>
 
             <?php if (isset($_SESSION['l_email']) && $_SESSION['l_email'] === "campusdotcrew@gmail.com") { ?>
@@ -47,7 +47,7 @@
           </ul>
         </div>
         <div class="element3" style="align-items: center;">
-          <?php include('./includes/navitems/element3.php');?>
+          <?php include('element3.php');?>
         </div>
       </div>
     </div>

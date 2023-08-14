@@ -105,6 +105,33 @@
         color:black;
     }
 
+    .widget.newsletter-widget form {
+        width:100%;
+        background:transparent;
+        padding:0;
+      
+          display: flex;
+          justify-content: space-between;
+      }
+      
+      .widget.newsletter-widget form input {
+          width: 100%;
+          padding: 15px 0px 15px 7px;
+          font-size: 12px;
+          width: 100%;
+          border: 1px solid black;
+          border-radius: 3px 0px 0px 3px;
+      }
+      
+      .widget.newsletter-widget form button {
+          padding: 5px 10px;
+          background: black;
+          color: white;
+          border: none;
+          border-radius: 0px  3px 3px 0px;
+          width:35%;
+      }
+
     /* Responsive */
     @media screen and (max-width: 600px) {
         .blog-card {

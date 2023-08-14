@@ -34,6 +34,47 @@
 
     <link rel="stylesheet" href="assets/css/dashboard.css">
 
+      <!-- Splide CSS -->
+  <link rel="stylesheet" href="assets/css/course/splide.min.css">
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="assets/css/course/style.css">
+
+  <link rel="stylesheet" href="/assets/css/loadmore.css">
+
+  <link rel="stylesheet" href="/assets/css/python.css">
+
+  <link rel="stylesheet" href="assets/css/course/AI.css">
+  <link rel="stylesheet" href="assets/css/course/C.css">
+  <link rel="stylesheet" href="assets/css/course/C++.css">
+  <link rel="stylesheet" href="assets/css/course/de.css">
+  <link rel="stylesheet" href="assets/css/course/DS.css">
+  <link rel="stylesheet" href="assets/css/course/HTML.css">
+  <link rel="stylesheet" href="assets/css/course/java.css">
+  <link rel="stylesheet" href="assets/css/course/JS.css">
+  <link rel="stylesheet" href="assets/css/course/micro.css">
+  <link rel="stylesheet" href="assets/css/course/ml.css">
+  <link rel="stylesheet" href="assets/css/course/mysql.css">
+  <link rel="stylesheet" href="assets/css/course/oop.css">
+  <link rel="stylesheet" href="assets/css/course/php.css">
+  <link rel="stylesheet" href="assets/css/course/python.css">
+  <link rel="stylesheet" href="assets/css/course/react.css">
+  <link rel="stylesheet" href="assets/css/course/VLSI.css">
+
+  	<!--====== Animate Css ======-->
+	<link rel="stylesheet" href="assets/css/Blog/animate.min.css">
+	<!--====== Bootstrap css ======-->
+	<link rel="stylesheet" href="assets/css/Blog/bootstrap.min.css" />
+	<!--====== Fontawesome css ======-->
+	<script src="https://kit.fontawesome.com/4dea93cae5.js" crossorigin="anonymous"></script>
+	<!--====== Slick  css ======-->
+	<link rel="stylesheet" href="assets/css/Blog/slick.css" />
+	<!-- Splide Slider CSS -->
+	<link rel="stylesheet" href="assets/css/Blog/splide.min.css">
+	<!--====== Style css ======-->
+	<link rel="stylesheet" href="assets/css/Blog/style.css" />
+
+
+
     <title>Campus Dot Crew</title>
     
     <?php

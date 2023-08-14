@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
+
+@font-face {
+  font-family: "python";
+  /* src: url("../assets/fonts/FluxRegular.ttf"); */
+  src: url("../assets/fonts/FluxRegular.woff");
+}
+
+tbody {
+  display: contents;
+}
+
+body {
+  font-family: montserrat;
+  background-color: #f6f4eb;
+}
+
+ol,
+ul {
+  padding-left: 1rem;
+}
+
+ol {
+  margin: 0;
+  list-style-type: disc;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(30, 30, 30);
+  transition: ease-out 0.1s;
+}
+
+ol a:hover {
+  text-decoration: underline;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+}
+
+ol ul li {
+  border: 1px solid black;
+}
+
+/* Nav Section Start */
+.profile .profile_img_container {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-width: 2px;
+  border-color: black;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.profile .profile_img_container img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.profile {
+  cursor: pointer;
+}
+
+#dropdownMenuButton1 {
+  margin-right: 10px;
+}
+
+/* Info Section Start */
+#infoSection {
+background-image: linear-gradient(to right, #7191ab, #bb81cd);
+}
+
+.python {
+  color: #020202;
+  font-family: "python";
+  font-weight: bold;
+  font-size: 52px;
+}
+
+#myBtn {
+  border: none;
+  font-weight: 500;
+  background: none;
+  font-size: 14px;
+}
+
+#more {
+  display: none;
+}
+
+.courseMore {
+  display: none;
+}
+
+/* Courses Section Start */
+#courses {
+  background-image: linear-gradient(to right, #71abab, #ab81cd);
+}
+
+/* Footer Section Start */
+
+/* Footer Widgets Area */
+
+/* Footer Widgets Area */
+.footer-widgets-area {
+  padding: 120px 0 70px;
+}
+
+.widget {
+  margin-bottom: 50px;
+}
+
+.widget-title {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 40px;
+  line-height: 1.4;
+}
+
+/* Address Widget */
+.widget.address-widget p {
+  margin-bottom: 20px;
+}
+
+/* Navigation Widget */
+.widget.nav-widget li {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.widget.nav-widget li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.widget.nav-widget li a:hover {
+  padding-left: 8px;
+}
+
+/* Newsletter Widget */
+.widget.newsletter-widget {
+  text-align: center;
+}
+
+.widget.newsletter-widget p {
+  font-family: "Roboto Slab", serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding-top: 20px;
+  margin-bottom: 30px;
+}
+
+.widget.newsletter-widget form {
+  position: relative;
+}
+
+.widget.newsletter-widget form input {
+  padding-right: 120px;
+}
+
+.widget.newsletter-widget form button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+/* Copyright Area */
+.footer-copyright-area {
+  padding: 50px 0;
+  border-top: 1px solid #e5e5e5;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-copyright-area::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+  width: 1px;
+  height: 100%;
+  background: #e5e5e5;
+  z-index: -1;
+}
+
+/* Social Links */
+.social-links ul {
+  display: flex;
+  font-size: 14px;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.social-links ul li {
+  margin-right: 10px;
+}
+
+.social-links ul li.title {
+  margin-right: 20px;
+  color: #000;
+  font-weight: 600;
+}
+
+.social-links ul li:last-child {
+  margin-right: 0;
+}
+
+.social-links ul a {
+  color: #3d3d3d;
+}
+
+.social-links ul a:hover {
+  color: #000;
+}
+
+/* Copyright Text */
+.footer-copyright-area .copyright-text {
+  font-size: 14px;
+}
+
+
+
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.message {
+  font-weight: bolder;
+  font-size: larger;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(218, 90, 90, 0.8);
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+}

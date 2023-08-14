@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="assets/css/nav/carousel.css">
+
 <section class="student-section" style="margin: 0rem 0rem; border: 0.5rem solid rgb(234, 234, 234)">
     <div id="stdCarousel" class="carousel slide text-center carousel-dark" data-bs-ride="carousel">
         <!-- Indicators -->
@@ -13,7 +15,7 @@
             <div class="carousel-item active c-item">
                 <!-- <img src="images/carousel/car1.jpg" class="c-img" alt="Carousel Image 1"> -->
                 <h1 class="mb-5">Our Team</h1>
-                <img class="rounded-circle shadow-1-strong mb-4"src="assets/images/our/m1.jpg" alt="avatar" style="width: 9.5rem;">
+                <img class="rounded-circle shadow-1-strong mb-4"src="assets/images/our/m1.jpg" alt="avatar" style="width: 9.5rem; height:9.5rem;">
                 <div class="row d-flex justify-content-center">
                     <div class="col-lg-8">
                         <h4 class="mb-3">Md. Arshad Khan Rumman</h4>
@@ -37,7 +39,7 @@
             </div>
             <div class="carousel-item c-item">
                 <h1 class="mb-5">Our Team</h1>
-                <img class="rounded-circle shadow-1-strong mb-4"src="assets/images/our/m2.jpg" alt="avatar" style="width: 9.5rem;">
+                <img class="rounded-circle shadow-1-strong mb-4"src="assets/images/our/m2.jpg" alt="avatar" style="width: 9.5rem; height:9.5rem;">
                 <div class="row d-flex justify-content-center">
                     <div class="col-lg-8">
                         <h4 class="mb-3">Sandip</h4>
@@ -61,7 +63,7 @@
             </div>
             <div class="carousel-item c-item">
                 <h1 class="mb-5">Our Team</h1>
-                <img class="rounded-circle shadow-1-strong mb-4"src="assets/images/our/m3.jpg" alt="avatar" style="width: 9.5rem;">
+                <img class="rounded-circle shadow-1-strong mb-4"src="assets/images/our/m3.jpg" alt="avatar" style="width: 9.5rem; height:9.5rem;">
                 <div class="row d-flex justify-content-center">
                     <div class="col-lg-8">
                         <h4 class="mb-3">Mahdi Hasan</h4>
@@ -85,7 +87,7 @@
             </div>
             <div class="carousel-item c-item">
                 <h1 class="mb-5">Supervised by</h1>
-                <img class="rounded-circle shadow-1-strong mb-4"src="assets/images/our/s1.jpg" alt="avatar" style="width: 9.5rem;">
+                <img class="rounded-circle shadow-1-strong mb-4"src="assets/images/our/s1.jpg" alt="avatar" style="width: 9.5rem; height:9.5rem;">
                 <div class="row d-flex justify-content-center">
                     <div class="col-lg-8">
                         <h4 class="mb-3"><a href="https://www.lus.ac.bd/author/quraishi/" target="_blank" style="text-decoration:none;color:black">Arafat Habib Quraishi</a></h4>
