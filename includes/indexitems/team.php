@@ -85,7 +85,7 @@
             </div>
             <div class="carousel-item c-item">
                 <h1 class="mb-5">Supervised by</h1>
-                <img class="rounded-circle shadow-1-strong mb-4"src="images/our/s1.jpg" alt="avatar" style="width: 9.5rem;">
+                <img class="rounded-circle shadow-1-strong mb-4"src="assets/images/our/s1.jpg" alt="avatar" style="width: 9.5rem;">
                 <div class="row d-flex justify-content-center">
                     <div class="col-lg-8">
                         <h4 class="mb-3"><a href="https://www.lus.ac.bd/author/quraishi/" target="_blank" style="text-decoration:none;color:black">Arafat Habib Quraishi</a></h4>
@@ -120,29 +120,3 @@
         </a>
     </div>
 </section>
-
-<style>
-    .carousel-section {
-        max-height: 35rem;
-        overflow: hidden;
-    }
-    .c-item{
-        height: 28rem;
-        width:100%;
-    }
-    .c-img{
-        height: 100%; 
-        width: 100%;
-        object-fit:contain;
-        filter: brightness(0.7); 
-    }
-    span.carousel-control-prev-icon,
-    span.carousel-control-next-icon {
-        color:black !important;
-    }
-
-    /* .carousel-control-prev,
-    .carousel-control-next {
-        background-color: rgba(245, 244, 244, 0.97);
-    } */
-</style>

@@ -24,17 +24,6 @@ $(document).ready(function(){
 $(document).ready(function() {
     $(".updatebtn").on("click", function() {
         $("#updateprofilemodal").modal("show");
-
-        var userId = $(this).data("user-id");
-
-        var name = $("#profileModal h2").text();
-        var email = $("#profileModal h5:eq(0)").text();
-        var phone = $("#profileModal h5:eq(1)").text();
-
-        $("#update_id").val(userId);
-        $("#name").val(name);
-        $("#email").val(email);
-        $("#phone").val(phone);
     });
 });
 

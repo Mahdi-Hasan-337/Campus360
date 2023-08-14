@@ -28,6 +28,8 @@
 
     <link rel="stylesheet" href="assets/css/nav/profilemodal.css">
 
+    <link rel="stylesheet" href="assets/css/nav/carousel.css">
+
     <link rel="stylesheet" href="assets/css/index.css">
 
     <link rel="stylesheet" href="assets/css/dashboard.css">

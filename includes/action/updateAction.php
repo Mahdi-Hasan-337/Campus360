@@ -12,19 +12,22 @@ if (isset($_POST["updatedata"])) {
     $telegram = mysqli_real_escape_string($conn, $_POST['telegram']);
     $github = mysqli_real_escape_string($conn, $_POST['github']);
 
-    if (isset($_FILES['image'])) {
+    // Check if an image is uploaded
+    if (isset($_FILES['image']) && $_FILES['image']['size'] > 0) {
         $image = $_FILES['image'];
         $imageName = mysqli_real_escape_string($conn, $_FILES['image']['name']);
         $img_des = "../../assets/uploads/" . $imageName;
 
         if (move_uploaded_file($image['tmp_name'], $img_des)) {
-            $updateQuery = "UPDATE `register` SET `db_username`='$name', `db_email`='$email', `db_phone`='$phone', `fb`='$facebook', `telegram`='$telegram', `github`='$github', `db_image`='$img_des' WHERE `id`='$id'";
+            $updateQuery = "UPDATE `register` SET 
+                            `db_username`='$name', `db_email`='$email', `db_phone`='$phone', `fb`='$facebook', `telegram`='$telegram', `github`='$github', `db_image`='$img_des' WHERE `id`='$id'";
         } else {
-            $_SESSION['status'] = "Error uploading image.";
+            $_SESSION['status'] = "Error uploading image. Please, upload an Image";
             header("Location: ../../index.php");
             exit();
         }
     } else {
+        // Update query without the image field
         $updateQuery = "UPDATE `register` SET 
                         `db_username`='$name', `db_email`='$email', `db_phone`='$phone', `fb`='$facebook', `telegram`='$telegram', `github`='$github' WHERE `id`='$id'";
     }

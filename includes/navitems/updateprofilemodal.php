@@ -44,7 +44,7 @@
 
             <div class="row g-3 align-items-center mb-3">
               <div class="col-3">
-                <label class="form-label">Email</label>
+                <label class="form-label">Name</label>
               </div>
               <div class="col-9">
                 <input type="text" name="user_name" id="user_name" class="form-control" placeholder="Enter Name" value="<?php echo $row['db_username']; ?>">

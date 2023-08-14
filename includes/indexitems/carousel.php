@@ -44,29 +44,3 @@
         </a>
     </div>
 </section>
-
-<style>
-    .carousel-section {
-        max-height: 35rem;
-        overflow: hidden;
-    }
-    .c-item{
-        height: 35rem;
-        width:100%;
-    }
-    .c-img{
-        height: 100%; 
-        width: 100%;
-        object-fit:contain;
-        filter: brightness(0.7); 
-    }
-    span.carousel-control-prev-icon,
-    span.carousel-control-next-icon {
-        color:black !important;
-    }
-
-    /* .carousel-control-prev,
-    .carousel-control-next {
-        background-color: rgba(245, 244, 244, 0.97);
-    } */
-</style>
