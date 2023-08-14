@@ -1,3 +1,4 @@
+// Toggole Password
 function passowrdToggole(inputId) {
     const passwordInput = document.getElementById(inputId);
     const passwordToggleIcon = document.querySelector(`[onclick="passowrdToggole('${inputId}')"]`);
@@ -12,6 +13,14 @@ function passowrdToggole(inputId) {
     }
 }
 
+/// Delete Profile Modal
+$(document).ready(function(){
+    $('.deletebtn').on('click', function() {
+        $('#deletemodal').modal('show');
+    });
+});
+
+/// Update profile Modal
 $(document).ready(function() {
     $(".updatebtn").on("click", function() {
         $("#updateprofilemodal").modal("show");
@@ -29,33 +38,21 @@ $(document).ready(function() {
     });
 });
 
+/// Preview Image before Updating
 function updateImagePreview() {
 const fileInput = document.getElementById('image');
-const imagePreview = document.getElementById('image-preview');
+    const imagePreview = document.getElementById('image-preview');
 
-const file = fileInput.files[0];
-const reader = new FileReader();
+    const file = fileInput.files[0];
+    const reader = new FileReader();
 
-reader.onloadend = function () {
-    imagePreview.src = reader.result;
-};
+    reader.onloadend = function () {
+        imagePreview.src = reader.result;
+    };
 
-if (file) {
-    reader.readAsDataURL(file);
-} else {
-    imagePreview.src = 'assets/images/campusdotcrew.png';
+    if (file) {
+        reader.readAsDataURL(file);
+    } else {
+        imagePreview.src = 'assets/images/campusdotcrew.png';
+    }
 }
-}
-
-$(document).ready(function(){
-    $('.deletebtn').on('click', function() {
-        $('#deletemodal').modal('show');
-    });
-});
-
-var el = document.getElementById("wrapper");
-var toggleButton = document.getElementById("menu-toggle");
-
-toggleButton.onclick = function () {
-    el.classList.toggle("toggled");
-};
