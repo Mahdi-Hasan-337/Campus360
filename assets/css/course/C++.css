@@ -3,7 +3,11 @@
 @font-face {
   font-family: "python";
   /* src: url("../assets/fonts/FluxRegular.ttf"); */
-  src: url("../assets/fonts/FluxRegular.woff");
+  src: url("assets/fonts/FluxRegular.woff");
+}
+
+::-webkit-scrollbar{
+  display: none;
 }
 
 tbody {
@@ -95,7 +99,7 @@ ol ul li {
 
 /* Courses Section Start */
 #courses {
-background-image: linear-gradient(to right, #331e35, #25694d);
+background-image: linear-gradient(to right, #e0a7e5, #4ba37e);
 }
 
 /* Footer Section Start */

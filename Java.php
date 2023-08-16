@@ -1,4 +1,6 @@
 <?php include 'includes/indexitems/header_code.php';?>
+<link rel="stylesheet" href="assets/css/course/java.css">
+
   <div class="container-fluid" style="margin:0;padding:0;box-sizing:border-box">
     <?php include('includes/indexitems/nav.php') ?>
 
@@ -73,31 +75,28 @@
                 <tr>
                   <td class="py-3">
                     <ol>
-                      <li><a href="https://www.youtube.com/watch?v=6Dl_gkr0Lmw&list=PLgH5QX0i9K3pCMBZcul1fta6UivHDbXvz&index=2">C
-                          By Anisul Islam</a></li>
+                      <li><a href="https://www.youtube.com/watch?v=6Dl_gkr0Lmw&list=PLgH5QX0i9K3pCMBZcul1fta6UivHDbXvz&index=2">Java By Anisul Islam</a></li>
                     </ol>
                   </td>
                 </tr>
                 <tr>
                   <td class="py-3">
                     <ol>
-                      <li><a href="https://www.youtube.com/watch?v=7Dh73z3icd8&list=PLu0W_9lII9aiXlHcLx-mDH1Qul38wD3aR">C
-                          By CodeWithHarry </a></li>
+                      <li><a href="https://www.youtube.com/watch?v=7Dh73z3icd8&list=PLu0W_9lII9aiXlHcLx-mDH1Qul38wD3aR">Java By CodeWithHarry </a></li>
                     </ol>
                   </td>
                 </tr>
                 <tr>
                   <td class="py-3">
                     <ol>
-                      <li><a href="https://www.youtube.com/watch?v=EjavYOFoJJ0&list=PLdo5W4Nhv31a8UcMN9-35ghv8qyFWD9_S">C
-                          By Jenny's Lectures CS IT</a></li>
+                      <li><a href="https://www.youtube.com/watch?v=EjavYOFoJJ0&list=PLdo5W4Nhv31a8UcMN9-35ghv8qyFWD9_S">Java By Jenny's Lectures CS IT</a></li>
                     </ol>
                   </td>
                 </tr>
                 <tr>
                   <td class="py-3">
                     <ol>
-                      <li><a href="https://www.youtube.com/watch?v=87SH2Cn0s9A">C By Bro Code</a></li>
+                      <li><a href="https://www.youtube.com/watch?v=87SH2Cn0s9A">Java By Bro Code</a></li>
                     </ol>
                   </td>
                 </tr>
@@ -107,16 +106,14 @@
                 <tr>
                   <td class="py-3">
                     <ol>
-                      <li><a href="https://www.youtube.com/watch?v=ec-Cd4jKFWc&list=PLxCzCOWd7aiGmiGl_DOuRMJYG8tOVuapB">C
-                          By Gate Smashers</a></li>
+                      <li><a href="https://www.youtube.com/watch?v=ec-Cd4jKFWc&list=PLxCzCOWd7aiGmiGl_DOuRMJYG8tOVuapB">Java By Gate Smashers</a></li>
                     </ol>
                   </td>
                 </tr>
                 <tr>
                   <td class="py-3">
                     <ol>
-                      <li><a href="https://www.youtube.com/watch?v=yNVnjI8p3NQ&list=PLz5bRBZ3z0DSDRh0ANkkglf6nkCpkpsZN">C
-                          By প্রোগ্রামিং ইশকুল</a></li>
+                      <li><a href="https://www.youtube.com/watch?v=yNVnjI8p3NQ&list=PLz5bRBZ3z0DSDRh0ANkkglf6nkCpkpsZN">Java By প্রোগ্রামিং ইশকুল</a></li>
                     </ol>
                   </td>
                 </tr>
@@ -138,29 +135,28 @@
                 <tr>
                   <td class="py-3">
                     <ol>
-                      <li><a href="https://www.javatpoint.com/what-is-an-instance-in-java">C by Javatpoint</a></li>
+                      <li><a href="https://www.javatpoint.com/what-is-an-instance-in-java">Java by Javatpoint</a></li>
                     </ol>
                   </td>
                 </tr>
                 <tr>
                   <td class="py-3">
                     <ol>
-                      <li><a href="https://www.w3schools.com/cpp/default.asp">C by w3schools</a></li>
+                      <li><a href="https://www.w3schools.com/cpp/default.asp">Java by w3schools</a></li>
                     </ol>
                   </td>
                 </tr>
                 <tr>
                   <td class="py-3">
                     <ol>
-                      <li><a href="https://www.geeksforgeeks.org/c-programming-language/">C by geeksforgeeks</a></li>
+                      <li><a href="https://www.geeksforgeeks.org/c-programming-language/">Java by geeksforgeeks</a></li>
                     </ol>
                   </td>
                 </tr>
                 <tr>
                   <td class="py-3">
                     <ol>
-                      <li><a href="https://programiz.pro/learn/master-c-programming?utm_source=sidebar-navigation&utm_campaign=programiz&utm_medium=referral">C
-                          by programiz</a></li>
+                      <li><a href="https://programiz.pro/learn/master-c-programming?utm_source=sidebar-navigation&utm_campaign=programiz&utm_medium=referral">Java by programiz</a></li>
                     </ol>
                   </td>
                 </tr>
@@ -170,14 +166,14 @@
                 <tr>
                   <td class="py-3">
                     <ol>
-                      <li><a href="https://www.codecademy.com/learn/paths/c">C by Code Academy</a></li>
+                      <li><a href="https://www.codecademy.com/learn/paths/c">Java by Code Academy</a></li>
                     </ol>
                   </td>
                 </tr>
                 <tr>
                   <td class="py-3">
                     <ol>
-                      <li><a href="https://www.coursera.org/specializations/c-programming">C by Coursera</a></li>
+                      <li><a href="https://www.coursera.org/specializations/c-programming">Java by Coursera</a></li>
                     </ol>
                   </td>
                 </tr>
@@ -313,4 +309,6 @@
     <!-- Courses Section End -->
   </div>
   </div>
+  <?php include 'includes/indexitems/footer.php';?>
+  <script src="assets/js/course/java.js"></script>
   <?php include 'includes/indexitems/footer_code.php';?>

@@ -31,7 +31,7 @@
             }
             else
             {
-                $_SESSION['status'] = "Email Alrerady Verified. Please Login";
+                $_SESSION['p_status'] = "Email Alrerady Verified. Please Login";
                 header('Location:../../index.php');
                 exit(0);
             }
@@ -44,7 +44,7 @@
     } 
     else
     {
-        $_SESSION['status'] = "Not Allowed";
+        $_SESSION['status'] = "Not Allowed...!!! Something went wrong.....!!!";
         header('Location:../../index.php');
     }
 ?>

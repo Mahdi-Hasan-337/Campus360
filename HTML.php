@@ -1,4 +1,5 @@
 <?php include 'includes/indexitems/header_code.php';?>
+  <link rel="stylesheet" href="assets/css/course/HTML.css">
   <div class="container-fluid" style="margin:0;padding:0;box-sizing:border-box">
     <?php include('includes/indexitems/nav.php') ?>
 
@@ -104,7 +105,7 @@
                 <tr>
                   <td class="py-3">
                     <ol>
-                      <li><a href="https://www.youtube.com/watch?v=6Dl_gkr0Lmw&list=PLgH5QX0i9K3pCMBZcul1fta6UivHDbXvz&index=2">C
+                      <li><a href="https://www.youtube.com/watch?v=6Dl_gkr0Lmw&list=PLgH5QX0i9K3pCMBZcul1fta6UivHDbXvz&index=2">HTML 
                           By Anisul Islam</a></li>
                     </ol>
                   </td>
@@ -112,7 +113,7 @@
                 <tr>
                   <td class="py-3">
                     <ol>
-                      <li><a href="https://www.youtube.com/watch?v=7Dh73z3icd8&list=PLu0W_9lII9aiXlHcLx-mDH1Qul38wD3aR">C
+                      <li><a href="https://www.youtube.com/watch?v=7Dh73z3icd8&list=PLu0W_9lII9aiXlHcLx-mDH1Qul38wD3aR">HTML 
                           By CodeWithHarry </a></li>
                     </ol>
                   </td>
@@ -120,7 +121,7 @@
                 <tr>
                   <td class="py-3">
                     <ol>
-                      <li><a href="https://www.youtube.com/watch?v=EjavYOFoJJ0&list=PLdo5W4Nhv31a8UcMN9-35ghv8qyFWD9_S">C
+                      <li><a href="https://www.youtube.com/watch?v=EjavYOFoJJ0&list=PLdo5W4Nhv31a8UcMN9-35ghv8qyFWD9_S">HTML 
                           By Jenny's Lectures CS IT</a></li>
                     </ol>
                   </td>
@@ -128,7 +129,7 @@
                 <tr>
                   <td class="py-3">
                     <ol>
-                      <li><a href="https://www.youtube.com/watch?v=87SH2Cn0s9A">C By Bro Code</a></li>
+                      <li><a href="https://www.youtube.com/watch?v=87SH2Cn0s9A">HTML  By Bro Code</a></li>
                     </ol>
                   </td>
                 </tr>
@@ -138,7 +139,7 @@
                 <tr>
                   <td class="py-3">
                     <ol>
-                      <li><a href="https://www.youtube.com/watch?v=ec-Cd4jKFWc&list=PLxCzCOWd7aiGmiGl_DOuRMJYG8tOVuapB">C
+                      <li><a href="https://www.youtube.com/watch?v=ec-Cd4jKFWc&list=PLxCzCOWd7aiGmiGl_DOuRMJYG8tOVuapB">HTML 
                           By Gate Smashers</a></li>
                     </ol>
                   </td>
@@ -146,7 +147,7 @@
                 <tr>
                   <td class="py-3">
                     <ol>
-                      <li><a href="https://www.youtube.com/watch?v=yNVnjI8p3NQ&list=PLz5bRBZ3z0DSDRh0ANkkglf6nkCpkpsZN">C
+                      <li><a href="https://www.youtube.com/watch?v=yNVnjI8p3NQ&list=PLz5bRBZ3z0DSDRh0ANkkglf6nkCpkpsZN">HTML 
                           By প্রোগ্রামিং ইশকুল</a></li>
                     </ol>
                   </td>
@@ -169,28 +170,28 @@
                 <tr>
                   <td class="py-3">
                     <ol>
-                      <li><a href="https://www.javatpoint.com/what-is-an-instance-in-java">C by Javatpoint</a></li>
+                      <li><a href="https://www.javatpoint.com/what-is-an-instance-in-java">HTML  by Javatpoint</a></li>
                     </ol>
                   </td>
                 </tr>
                 <tr>
                   <td class="py-3">
                     <ol>
-                      <li><a href="https://www.w3schools.com/cpp/default.asp">C by w3schools</a></li>
+                      <li><a href="https://www.w3schools.com/cpp/default.asp">HTML  by w3schools</a></li>
                     </ol>
                   </td>
                 </tr>
                 <tr>
                   <td class="py-3">
                     <ol>
-                      <li><a href="https://www.geeksforgeeks.org/c-programming-language/">C by geeksforgeeks</a></li>
+                      <li><a href="https://www.geeksforgeeks.org/c-programming-language/">HTML  by geeksforgeeks</a></li>
                     </ol>
                   </td>
                 </tr>
                 <tr>
                   <td class="py-3">
                     <ol>
-                      <li><a href="https://programiz.pro/learn/master-c-programming?utm_source=sidebar-navigation&utm_campaign=programiz&utm_medium=referral">C
+                      <li><a href="https://programiz.pro/learn/master-c-programming?utm_source=sidebar-navigation&utm_campaign=programiz&utm_medium=referral">HTML 
                           by programiz</a></li>
                     </ol>
                   </td>
@@ -201,14 +202,14 @@
                 <tr>
                   <td class="py-3">
                     <ol>
-                      <li><a href="https://www.codecademy.com/learn/paths/c">C by Code Academy</a></li>
+                      <li><a href="https://www.codecademy.com/learn/paths/c">HTML  by Code Academy</a></li>
                     </ol>
                   </td>
                 </tr>
                 <tr>
                   <td class="py-3">
                     <ol>
-                      <li><a href="https://www.coursera.org/specializations/c-programming">C by Coursera</a></li>
+                      <li><a href="https://www.coursera.org/specializations/c-programming">HTML  by Coursera</a></li>
                     </ol>
                   </td>
                 </tr>
@@ -344,4 +345,6 @@
     <!-- Courses Section End -->
   </div>
   </div>
+  <?php include 'includes/indexitems/footer.php';?>
+  <script src="assets/js/course/HTML.js"></script>
   <?php include 'includes/indexitems/footer_code.php';?>

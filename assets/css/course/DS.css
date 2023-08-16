@@ -3,7 +3,12 @@
 @font-face {
   font-family: "python";
   /* src: url("../assets/fonts/FluxRegular.ttf"); */
-  src: url("../assets/fonts/FluxRegular.woff");
+  src: url("assets/fonts/FluxRegular.woff");
+}
+
+
+::-webkit-scrollbar{
+  display: none;
 }
 
 tbody {

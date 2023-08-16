@@ -1,3 +1,6 @@
+::-webkit-scrollbar{
+    display: none;
+}
 .carousel-section {
     max-height: 35rem;
     overflow: hidden;

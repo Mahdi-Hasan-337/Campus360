@@ -23,24 +23,20 @@
                     exit();
                 } else {
                     $_SESSION['status'] = "Error deleting account: ";
-                    //echo "<script>alert('Error deleting account')</script>";
                     header("Location: ../../index.php");
                     exit();
                 }
             } else {
                 $_SESSION['status'] = "Incorrect password. Account deletion failed.";
-                //echo "<script>alert('Incorrect password. Account deletion failed.')</script>";
                 header("Location: ../../index.php");
                 exit();
             }
         } else {
             $_SESSION['status'] = "User not found. Account deletion failed.";
-            //echo "<script>alert('User not found. Account deletion failed.')</script>";
             header("Location: ../../index.php");
             exit();
         }
     }
-    //echo "<script>alert('Deleted....!!!')</script>";
     header("Location: ../../index.php");
     exit();
 ?>

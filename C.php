@@ -1,8 +1,7 @@
 <?php include 'includes/indexitems/header_code.php'; ?>
+  <link rel="stylesheet" href="assets/css/course/C.css">
   <div class="container-fluid" style="margin:0; padding:0; box-sizing:border-box">
-    <!-- Nav Section Start -->
     <?php include('includes/indexitems/nav.php') ?>
-    <!-- Nav Section End -->
 
     <!-- Info Section Start -->
     <section id="infoSection" class="info p-4">
@@ -355,5 +354,5 @@
     <!-- Courses Section End -->
   </div>
   <?php include 'includes/indexitems/footer.php'; ?>
-
+  <script src="assets/js/course/C.js"></script>
   <?php include 'includes/indexitems/footer_code.php'; ?>

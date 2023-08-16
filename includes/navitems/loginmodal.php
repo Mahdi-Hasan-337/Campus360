@@ -24,7 +24,7 @@
           </div>
           <button class="button" name="login_btn">Login</button>
           <div class="login-signup">
-            Already have an account?
+            Don't have an account?
             <a class="signup-txt" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal" style="cursor:pointer">Signup</a>
           </div>
           <hr>

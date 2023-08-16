@@ -14,7 +14,7 @@
             $image_path = '';
             $default_image = 'assets/images/campusdotcrew.png';
             if (!empty($row['db_image'])) {
-              $image_path = 'assets/uploads/' . $row['db_image'];
+              $image_path = 'assets/uploads/'.$row['db_image'];
             } else {
               $image_path = $default_image;
             }
@@ -61,3 +61,5 @@
     </div>
   </div>
 </div>
+
+<link rel="stylesheet" href="assets/css/nav/profilemodal.css">

@@ -19,9 +19,6 @@
             <div class="carousel-item c-item">
                 <img src="assets/images/carousel/car2.jpg" class="c-img" alt="Carousel Image 2">
                 <div class="carousel-caption" style="color:white">
-                    <!-- <h3>Be expert in Networking</h3>
-                    <p>Instructor : Dewan Chowdhury</p>
-                    <p>Host : IEEE LU chapter</p> -->
                 </div>
             </div>
             <div class="carousel-item c-item">

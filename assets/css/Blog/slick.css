@@ -1,4 +1,9 @@
-/* Slider */
+
+::-webkit-scrollbar{
+	display: none;
+  }
+  
+ /* Slider */
 .slick-slider {
 	position: relative;
 	display: block;

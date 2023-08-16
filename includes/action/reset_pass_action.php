@@ -22,7 +22,6 @@
         $mail->SMTPSecure = "tls";
         $mail->Port       = 587;
 
-        //Recipients
         $mail->setFrom('campusdotcrew@gmail.com', $name);
         $mail->addAddress($email);
         
@@ -57,8 +56,7 @@
             $update_token_run = mysqli_query($conn, $update_token);
     
             if ($update_token_run) {
-                /// Call the function
-                reset_password($name, $email, $token);
+                reset_password($name, $email, $token); /// Call the function
                 $_SESSION['p_status'] = "Password reset link has been sent to your email";
                 header('Location:../../index.php');
                 exit(0);

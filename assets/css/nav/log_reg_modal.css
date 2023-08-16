@@ -1,4 +1,7 @@
 /* ==================== Login Modal & Register Modal ====================*/
+::-webkit-scrollbar{
+    display: none;
+}
 form{
     padding: 2rem;
     /* width: 25rem; */
@@ -64,7 +67,6 @@ h2{
     white-space: nowrap;
     font-size: 1rem;
 }
-
 .checkbox input{
     accent-color: rgb(174, 174, 245);
 }

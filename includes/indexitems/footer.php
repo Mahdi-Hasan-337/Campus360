@@ -26,11 +26,11 @@
                       <div class="widget nav-widget">
                           <h4 class="widget-title">Categories</h4>
                           <ul>
-                              <li><a class="item" href="#">Lifestyle</a></li>
-                              <li><a class="item" href="#">Travel</a></li>
-                              <li><a class="item" href="#">Food & Drinks</a></li>
+                              <li><a class="item" href="#">Paid Courses</a></li>
+                              <li><a class="item" href="#">Motivation</a></li>
                               <li><a class="item" href="#">Inspiration</a></li>
-                              <li><a class="item" href="#">Decoration</a></li>
+                              <li><a class="item" href="#">Job Preparation</a></li>
+                              <li><a class="item" href="#">Blog</a></li>
                           </ul>
                       </div>
                   </div>

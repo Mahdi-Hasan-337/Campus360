@@ -1,6 +1,8 @@
-<?php include '../includes/indexitems/header_code.php'; ?>
+<?php include 'includes/indexitems/header_code.php'; ?>
+<link rel="stylesheet" href="assets/css/course/python.css">
+
   <div class="container-fluid" style="margin:0; padding:0;box-sizing:border-box">
-    <?php include('../includes/indexitems/nav.php') ?>
+    <?php include('includes/indexitems/nav.php') ?>
 
     <!-- Info Section Start -->
     <section id="infoSection" class="info p-4">
@@ -288,5 +290,6 @@
   </div>
   <!-- </div> -->
 
-  <?php include '../includes/indexitems/footer.php';?>
-  <?php include '../includes/indexitems/footer_code.php';?>
+  <?php include 'includes/indexitems/footer.php';?>
+  <script src="assets/js/course/python.js"></script>
+  <?php include 'includes/indexitems/footer_code.php';?>

@@ -30,7 +30,7 @@
           </div>
           <button class="button" name="register_btn">Register</button>
           <div class="login-signup">
-              Don't have an account?
+              Already have an account?
               <a class="signup-txt" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal" style="cursor:pointer;">Signin</a>
           </div>
         </form>

@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab:wght@700&family=Roboto:ital,wght@1,500&display=swap');
+
+::-webkit-scrollbar{
+  display: none;
+}
 * {
   margin: 0;
   padding: 0;
@@ -66,19 +70,16 @@ box-shadow: none;
   font-size: 18px;
 }
 
-    /* Hide the alert after 20s */
+/* alert*/
 .auto-hide {
   animation: hideAlert 20s forwards;
 }
-
 @keyframes hideAlert {
   to {
       opacity: 0;
       display: none;
   }
 }
-
-/* Free up space after sollapse the alert*/
 .alert-container {
     position: relative;
     display: none;

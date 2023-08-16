@@ -6,6 +6,11 @@
   font-family: "Noto Sans", sans-serif;
   /* background-color: #eeeded; */
 }
+
+::-webkit-scrollbar{
+  display: none;
+}
+
 img {
   width: 100%;
   height: 100%;
@@ -208,6 +213,33 @@ ul.splide__pagination.splide__pagination--ltr {
 
 .footer-copyright-area .copyright-text {
   font-size: 14px;
+}
+
+/* Rewrite Code */
+.widget.newsletter-widget form {
+  width:100%;
+  background:transparent;
+  padding:0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.widget.newsletter-widget form input {
+    width: 100%;
+    /* padding: 15px 0px 15px 7px; */
+    font-size: 12px;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 3px 0px 0px 3px;
+}
+
+.widget.newsletter-widget form button {
+  padding: 5px 10px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 0px  3px 3px 0px;
+  width:35%;
 }
 
 /* Responsive */

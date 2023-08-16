@@ -18,11 +18,11 @@
             </li>
 
             <li class="n-item nav-item">
-              <a class="li-item nav-link" aria-current="page" href="CoursePage.php">Job Preparation</a>
+              <a class="li-item nav-link" aria-current="page" href="job_part.php">Job Preparation</a>
             </li>
 
             <li class="n-item nav-item">
-              <a class="li-item nav-link" aria-current="page" href="#">Blog</a>
+              <a class="li-item nav-link" aria-current="page" href="blog.php">Blog</a>
             </li>
 
             <?php if (isset($_SESSION['l_email']) && $_SESSION['l_email'] === "campusdotcrew@gmail.com") { ?>

@@ -1,6 +1,9 @@
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Borel&family=Noto+Sans:wght@100;300;400;500;600;700&display=swap");
 
+::-webkit-scrollbar{
+    display: none;
+}
 * {
     padding: 0;
     margin: 0;

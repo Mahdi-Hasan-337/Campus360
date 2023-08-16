@@ -1,5 +1,10 @@
     /* Footer Section Start */
-    .footer-widgets-area {
+    
+    ::-webkit-scrollbar{
+    display: none;
+  }
+  
+  .footer-widgets-area {
         padding: 120px 0 70px;
     }
 

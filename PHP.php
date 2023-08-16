@@ -1,4 +1,6 @@
 <?php include 'includes/indexitems/header_code.php';?>
+<link rel="stylesheet" href="assets/css/course/php.css">
+
   <div class="container-fluid" style="margin:0;padding:0;box-sizing:border-box">
     <?php include('includes/indexitems/nav.php') ?>
 
@@ -265,4 +267,6 @@
     </section>
     <!-- Courses Section End -->
   </div>
+  <?php include 'includes/indexitems/footer.php';?>
+  <script src="assets/js/course/php.js"></script>
   <?php include 'includes/indexitems/footer_code.php';?>

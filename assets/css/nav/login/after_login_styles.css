@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab:wght@700&family=Roboto:ital,wght@1,500&display=swap');
-        
+
+/* Used to avoid vertical scrollbar */
+::-webkit-scrollbar{
+  display: none;
+}     
+
 /* Navbar */
 .d-item{
   text-align: center;
@@ -101,52 +106,34 @@
   display: flex;
   align-items: center;
 }
-
 .reverse{
 display:flex;
 align-items:center;
 }
-
 .navbar-nav {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-  
-  /* alert*/
-  .alert-container {
-    position: relative;
-    display: none;
+/* alert */
+.auto-hide {
+  animation: hideAlert 5s forwards;
+}
+@keyframes hideAlert {
+  to {
+      opacity: 0;
+      display: none;
   }
-
-  .alert-container.show {
-      display: block;
-      /* margin-bottom: 1.25rem; */
-  }
-  
-  /* Hide the alert after 20s */
-  .auto-hide {
-    animation: hideAlert 5s forwards;
-  }
-
-  @keyframes hideAlert {
-    to {
-        opacity: 0;
-        display: none;
-    }
-  }
-
-  /* Free up space after sollapse the alert*/
-  .alert-container {
-    position: relative;
-    display: none;
-  }
-
-  .alert-container.show {
-    display: block;
-    margin-bottom: 20px;
-  }
+}
+.alert-container {
+  position: relative;
+  display: none;
+}
+.alert-container.show {
+  display: block;
+  margin-bottom: 20px;
+}
 
 /* Responsive Design */
 @media (max-width: 992px){
@@ -154,7 +141,6 @@ align-items:center;
   background: none;
   color: whitesmoke; 
   }
-
   .li-item:hover{
   color: whitesmoke !important;
   }

@@ -6,7 +6,6 @@
     use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
 
-    // require 'vendor/autoload.php';
     require '../../vendor/autoload.php';
 
     function sendemail_verify($r_username,$r_email,$verify_token)
@@ -46,8 +45,7 @@
         $r_phone = $_POST['r_phone'];
         $r_pass = $_POST['r_pass'];
         $r_con_pass = $_POST['r_con_pass'];
-        
-        $verify_token = md5(rand());
+        $verify_token = md5(rand()); /// random value for token
 
         // regex of all fields
         $username_pattern = "/[A-Za-z ._]{3,}/";
